@@ -14,7 +14,7 @@ const HomePage = () => {
           <WrapperImageTop>
             <Image 
               src={Myrhmica}
-              alt={''}
+              alt={'Myrhmica'}
               width={300}
               height={200}
             />
