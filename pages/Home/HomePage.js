@@ -35,52 +35,53 @@ const HomePage = () => {
               alt={'FourmiBleu'}
             />
           </WrapperContentLeft>
+          
           <WrapperContentRight>
-            <Link href="/Login/Demandeur_offre">
-              <a>
-                <WrapperButton>
-                  <Text>Login</Text>
-                </WrapperButton>
-              </a>
-            </Link>
             <Link href="/Register/Demandeur_offre">
               <a>
                 <WrapperButton>
-                  <Text>Register</Text>
+                  <Text>Crée un compte Demandeur de compétence</Text>
+                </WrapperButton>
+              </a>
+            </Link>
+            <Link href="/Login/Demandeur_offre">
+              <a>
+                <WrapperButton>
+                  <Text>Connexion Demandeur de compétence</Text>
                 </WrapperButton>
               </a>
             </Link>
 
-            <Link href="/Login/Institutionnel">
-              <a>
-                <WrapperButton>
-                  <Text>Login</Text>
-                </WrapperButton>
-              </a>
-            </Link>
             <Link href="/Register/Institutionnel">
               <a>
                 <WrapperButton>
-                  <Text>Register</Text>
+                  <Text>Crée un compte Institutionnels</Text>
+                </WrapperButton>
+              </a>
+            </Link>
+            <Link href="/Login/Institutionnel">
+              <a>
+                <WrapperButton>
+                  <Text>Connexion Institutionnels</Text>
                 </WrapperButton>
               </a>
             </Link>
 
-            <Link href="/Login/Offreur_de_competence">
-              <a>
-                <WrapperButton>
-                  <Text>Login</Text>
-                </WrapperButton>
-              </a>
-            </Link>
             <Link href="/Register/Offreur_de_competence">
               <a>
                 <WrapperButton>
-                  <Text>Register</Text>
+                  <Text>Crée un compte Offreur de compétence</Text>
                 </WrapperButton>
               </a>
             </Link>
-            
+            <Link href="/Login/Offreur_de_competence">
+              <a>
+                <WrapperButton>
+                  <Text>Connexion Offreur de compétence</Text>
+                </WrapperButton>
+              </a>
+            </Link>
+
           </WrapperContentRight>
           </WrapperContentMiddle>
 
