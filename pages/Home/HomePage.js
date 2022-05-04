@@ -1,13 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import Link from 'next/link';
-import WrapperContent, { WrapperContentLeft, WrapperImageTop, WrapperImageBottom, Text, WrapperButton, WrapperContentRight, WrapperContentMiddle } from './HomePage.style';
+import WrapperContent, { WrapperContentLeft, WrapperImageTop, WrapperImageBottom, Text, Button, WrapperButton, WrapperContentRight, WrapperContentMiddle } from './HomePage.style';
 
 // IMAGES
 import FourmiBleu from '../../public/image/FourmiBleu-removebg-preview.png';
 import boiteDeDialogue from '../../public/image/boitededialogue.png';
 import Myrhmica from '../../public/image/Myrhmica_logocolor-removebg.png';
-import PortraitScopie from '../../public/image/PortraitScopie-remove.png';
+import PortraiScopie from '../../public/image/PortraitScopie-remove.png';
 
 const HomePage = () => {
     return (
@@ -37,58 +37,64 @@ const HomePage = () => {
           </WrapperContentLeft>
           
           <WrapperContentRight>
+
+            <WrapperButton>
             <Link href="/Register/Demandeur_offre">
               <a>
-                <WrapperButton>
+                <Button>
                   <Text>Crée un compte Demandeur de compétence</Text>
-                </WrapperButton>
+                </Button>
               </a>
             </Link>
             <Link href="/Login/Demandeur_offre">
               <a>
-                <WrapperButton>
+                <Button>
                   <Text>Connexion Demandeur de compétence</Text>
-                </WrapperButton>
+                </Button>
               </a>
             </Link>
+            </WrapperButton>
 
+            <WrapperButton>
             <Link href="/Register/Institutionnel">
               <a>
-                <WrapperButton>
+                <Button>
                   <Text>Crée un compte Institutionnels</Text>
-                </WrapperButton>
+                </Button>
               </a>
             </Link>
             <Link href="/Login/Institutionnel">
               <a>
-                <WrapperButton>
+                <Button>
                   <Text>Connexion Institutionnels</Text>
-                </WrapperButton>
+                </Button>
               </a>
             </Link>
+            </WrapperButton>
 
+            <WrapperButton>
             <Link href="/Register/Offreur_de_competence">
               <a>
-                <WrapperButton>
+                <Button>
                   <Text>Crée un compte Offreur de compétence</Text>
-                </WrapperButton>
+                </Button>
               </a>
             </Link>
             <Link href="/Login/Offreur_de_competence">
               <a>
-                <WrapperButton>
+                <Button>
                   <Text>Connexion Offreur de compétence</Text>
-                </WrapperButton>
+                </Button>
               </a>
             </Link>
+            </WrapperButton>
 
           </WrapperContentRight>
           </WrapperContentMiddle>
-
           <WrapperImageBottom>
             <Image 
-              src={PortraitScopie}
-              alt={'PortraitScopie'}
+              src={PortraiScopie}
+              alt={'PortraiScopie'}
               width={410}
               height={80}
             />
