@@ -35,7 +35,7 @@ const Header = () => {
             <a>
               <Image
                 src={Profil}
-                alt={"PortraitScopie"}
+                alt={"Profile"}
                 height={50}
                 width={50}
               />

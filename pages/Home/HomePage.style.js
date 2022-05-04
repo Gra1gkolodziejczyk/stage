@@ -24,4 +24,9 @@ export const WrapperImageBottom = styled.div`
     margin: 300px 25px 0 0;
 `;
 
+export const Text = styled.p``;
+export const WrapperButton = styled.button``;
+export const WrapperContentRight = styled.div``;
+export const WrapperContentMiddle = styled.div``;
+
 export default WrapperContent;

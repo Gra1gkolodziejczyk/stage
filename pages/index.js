@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
-=======
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import Header from "../pages/Header/Header";
-import Footer from "../pages/Footer/Footer";
->>>>>>> 1c8c9e5386ffe8b6f811be7c886f2ee733183129
 
 import HomePage from './Home/HomePage';
 
@@ -19,12 +12,7 @@ export default function Index() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-<<<<<<< HEAD
         <HomePage />
-=======
-        <Header />
-        <Footer />
->>>>>>> 1c8c9e5386ffe8b6f811be7c886f2ee733183129
       </main>
     </div>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import WrapperContent, { WrapperContentLeft, WrapperImageTop, WrapperImageBottom } from './HomePage.style';
+import Link from 'next/link';
+import WrapperContent, { WrapperContentLeft, WrapperImageTop, WrapperImageBottom, Text, WrapperButton, WrapperContentRight, WrapperContentMiddle } from './HomePage.style';
 
 // IMAGES
 import FourmiBleu from '../../public/image/FourmiBleu-removebg-preview.png';
@@ -19,7 +20,9 @@ const HomePage = () => {
               height={200}
             />
           </WrapperImageTop>
-          <WrapperContentLeft>
+
+          <WrapperContentMiddle>
+            <WrapperContentLeft>
             <Image 
               src={boiteDeDialogue}
               alt={'Boite De dialogue'}
@@ -32,6 +35,55 @@ const HomePage = () => {
               alt={'FourmiBleu'}
             />
           </WrapperContentLeft>
+          <WrapperContentRight>
+            <Link href="/Login/Demandeur_offre">
+              <a>
+                <WrapperButton>
+                  <Text>Login</Text>
+                </WrapperButton>
+              </a>
+            </Link>
+            <Link href="/Register/Demandeur_offre">
+              <a>
+                <WrapperButton>
+                  <Text>Register</Text>
+                </WrapperButton>
+              </a>
+            </Link>
+
+            <Link href="/Login/Institutionnel">
+              <a>
+                <WrapperButton>
+                  <Text>Login</Text>
+                </WrapperButton>
+              </a>
+            </Link>
+            <Link href="/Register/Institutionnel">
+              <a>
+                <WrapperButton>
+                  <Text>Register</Text>
+                </WrapperButton>
+              </a>
+            </Link>
+
+            <Link href="/Login/Offreur_de_competence">
+              <a>
+                <WrapperButton>
+                  <Text>Login</Text>
+                </WrapperButton>
+              </a>
+            </Link>
+            <Link href="/Register/Offreur_de_competence">
+              <a>
+                <WrapperButton>
+                  <Text>Register</Text>
+                </WrapperButton>
+              </a>
+            </Link>
+            
+          </WrapperContentRight>
+          </WrapperContentMiddle>
+
           <WrapperImageBottom>
             <Image 
               src={PortraitScopie}
