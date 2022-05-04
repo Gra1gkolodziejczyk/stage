@@ -1,34 +1,56 @@
 import React from "react";
-import HeaderWrapper, { ImgWrapperLeft, ImgWrapperRight,Text } from './Header.style';
+import HeaderWrapper, { ImgWrapperLeft, ImgWrapperRight, Text, ContainerMenu, WrapperTitle, Title } from './Header.style';
 import Image from 'next/image';
 import Link from "next/link";
+
+// IMAGES
+import PortraitScopie from '../../public/image/PortraitScopie-remove.png';
 
 const Header = () => {
     return (
         <>
             <HeaderWrapper>
                 <ImgWrapperLeft>
-                    <Link href='/'>
+                    <Link href="/portraitscopie">
+                        <a>
                         <Image 
-                            src={}
+                            src={PortraitScopie}
                             alt={'PortraitScopie'}
-                            width={350}
-                            height={69}
+                            width={300}
+                            height={75}
                         />
+                        </a>
                     </Link>
                 </ImgWrapperLeft>
                 <ImgWrapperRight>
-                    <Link href='/profile'>
+                    <Link href="/profile">
+                        <a>
                         <Image 
-                            src={}
+                            src={PortraitScopie}
                             alt={'PortraitScopie'}
-                            width={350}
-                            height={69}
+                            height={50}
+                            width={50}
                         />
-                        <Text>Jhon</Text>
+                        </a>
                     </Link> 
+                    <Text>Jhon</Text>
                 </ImgWrapperRight>
             </HeaderWrapper>
+
+            <ContainerMenu>
+                <WrapperTitle>
+                    <Link href="/accueil">
+                    <a>
+                        <Title>Accueil</Title>
+                    </a>
+                    </Link>
+                    <Link href="/offres">
+                    <a>
+                        <Title>Offres</Title>
+                    </a>
+                    </Link>
+                </WrapperTitle>
+            </ContainerMenu>
         </>
     );
 }
