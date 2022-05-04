@@ -16,7 +16,7 @@ const HomePage = () => {
   return (
     <WrapperContent>
       <WrapperImageTop>
-        <Image src={Myrhmica} alt={""} width={300} height={200} />
+        <Image src={Myrhmica} alt={"Myrhmica"} width={300} height={200} />
       </WrapperImageTop>
       <WrapperContentLeft>
         <Image

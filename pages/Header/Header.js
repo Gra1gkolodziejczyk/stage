@@ -12,6 +12,7 @@ import Link from "next/link";
 
 // IMAGES
 import PortraitScopie from "../../public/image/PortraitScopie-remove.png";
+import Profil from "../../public/image/profil.png";
 
 const Header = () => {
   return (
@@ -32,12 +33,7 @@ const Header = () => {
         <ImgWrapperRight>
           <Link href="/profile">
             <a>
-              <Image
-                src={PortraitScopie}
-                alt={"PortraitScopie"}
-                height={50}
-                width={50}
-              />
+              <Image src={Profil} alt={"Profile"} height={50} width={50} />
             </a>
           </Link>
           <Text>Jhon</Text>
