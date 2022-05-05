@@ -37,9 +37,9 @@ const Offreur_de_competence = () => {
         </Subtitle>
         <WrapperCoche>
           <Button></Button>
-          <Text>J'ai pris connnaissance et j'accepte la 
+          <Text>J'ai pris connnaissance et j'accepte la   
             <Link href="/">
-                <a>politique de confidentialité</a>
+                <a> politique de confidentialité</a>
             </Link>
           </Text>
         </WrapperCoche>

@@ -6,7 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 // IMPORT COMPONENTS
-import WrapperContent, {
+import {
+  WrapperContent,
   WrapperContentLeft,
   WrapperImageTop,
   WrapperImageBottom,
@@ -52,7 +53,7 @@ const HomePage = () => {
 
         <WrapperContentRight>
           <WrapperButton>
-            <Link href="/Register/Demandeur_offre">
+            <Link href="/Register/Demandeur_competence">
               <a>
                 <Button>
                   <Text>Crée un compte Demandeur de compétence</Text>

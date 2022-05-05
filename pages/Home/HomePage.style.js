@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-const WrapperContent = styled.div`
-    
+export const WrapperContent = styled.div`
+    text-decoration: none;
 `;
 
 export const WrapperContentLeft = styled.div`
@@ -55,4 +55,3 @@ export const WrapperContentMiddle = styled.div`
     flex-direction: 'row';
 `;
 
-export default WrapperContent;
