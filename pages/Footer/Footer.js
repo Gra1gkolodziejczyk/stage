@@ -1,9 +1,7 @@
 import React from "react";
 import FooterWrapper, {
   Text,
-  TextC,
   ImageWrapper,
-  TextWrapper,
   ContentWrapper,
 } from "./Footer.style";
 import Image from "next/image";
@@ -17,15 +15,13 @@ const Footer = () => {
         <Image src={Myrhmica} alt={"Myrhmica"} width={200} height={120} />
       </ImageWrapper>
       <ContentWrapper>
-        <TextWrapper>
-          <Text>Contact</Text>
-          <Text>Mention Légales</Text>
-          <Text>Politique de confidentialité</Text>
-        </TextWrapper>
-        <TextC>
+        <Text>Contact</Text>
+        <Text>Mention Légales</Text>
+        <Text>Politique de confidentialité</Text>
+        <Text>
           Copyright © 2021 SAS Human Vision Global Solution - Consulting - Hvgs
           Innnovation Based Company
-        </TextC>
+        </Text>
       </ContentWrapper>
     </FooterWrapper>
   );
