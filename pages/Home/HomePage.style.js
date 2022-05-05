@@ -19,14 +19,13 @@ export const WrapperImageBottom = styled.div`
   display: flex;
   justify-content: flex-end;
   flex-direction: row;
+  align-items: flex-end;
 `;
 
 export const Text = styled.p`
   font-size: 28px;
-  display: flex;
-  align-items: center;
   text-align: center;
-  padding: 10px;
+  margin: 10px;
 `;
 
 export const Button = styled.div`
@@ -36,6 +35,9 @@ export const Button = styled.div`
   width: 300px;
   height: 200px;
   display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-right: 20px;
 `;
 
 export const WrapperButton = styled.div`
@@ -46,6 +48,7 @@ export const WrapperButton = styled.div`
 export const WrapperContentRight = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 `;
 export const WrapperContentMiddle = styled.div`
   display: flex;

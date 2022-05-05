@@ -22,7 +22,13 @@ const HomePage = () => {
   return (
     <WrapperContent>
       <WrapperImageTop>
-        <Image src={Myrhmica} alt={"Myrhmica"} quality={100} />
+        <Image
+          src={Myrhmica}
+          alt={"Myrhmica"}
+          quality={100}
+          width={175}
+          height={110}
+        />
       </WrapperImageTop>
 
       <WrapperContentMiddle>
@@ -34,7 +40,12 @@ const HomePage = () => {
             width={500}
             height={400}
           />
-          <Image className="img" src={FourmiBleu} alt={"FourmiBleu"} />
+          <Image
+            className="img"
+            src={FourmiBleu}
+            alt={"FourmiBleu"}
+            quality={100}
+          />
         </WrapperContentLeft>
 
         <WrapperContentRight>
@@ -94,8 +105,9 @@ const HomePage = () => {
         <Image
           src={PortraiScopie}
           alt={"PortraiScopie"}
-          width={410}
-          height={80}
+          quality={100}
+          width={400}
+          height={100}
         />
       </WrapperImageBottom>
     </WrapperContent>
