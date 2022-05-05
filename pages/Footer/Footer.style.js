@@ -4,7 +4,7 @@ const FooterWrapper = styled.div`
   background-color: #3b3361;
   color: white;
   display: flex;
-  margin-top: 666px;
+  margin-top: 510px;
 `;
 
 export const ImageWrapper = styled.div`
