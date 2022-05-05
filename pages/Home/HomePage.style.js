@@ -28,7 +28,7 @@ export const Text = styled.p`
     margin: 10px 25px 10px 50px;
     a {
         text-decoration: none;
-    };
+    }
 `;
 
 export const Button = styled.div`

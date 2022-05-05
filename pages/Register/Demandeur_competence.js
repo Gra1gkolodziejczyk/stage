@@ -3,12 +3,12 @@ import Image from "next/image";
 import Link from 'next/image';
 import Footer from '../Footer/Footer';
 
-const Institutionnel = () => {
+const Demandeur_competence = () => {
   return (
     <div>
-        <h1>Register Institutionnel</h1>
+        <h1>Register Demandeur_competence</h1>
     </div>
   )
 }
 
-export default Institutionnel;
+export default Demandeur_competence;

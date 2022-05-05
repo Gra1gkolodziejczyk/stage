@@ -1,7 +1,21 @@
+// IMPORT REACT
 import React from "react";
+
+// NEXT WIDGETS
 import Image from "next/image";
 import Link from 'next/link';
-import WrapperContent, { WrapperContentLeft, WrapperImageTop, WrapperImageBottom, Text, Button, WrapperButton, WrapperContentRight, WrapperContentMiddle } from './HomePage.style';
+
+// IMPORTS STYLES
+import WrapperContent, { 
+  WrapperContentLeft, 
+  WrapperImageTop, 
+  WrapperImageBottom, 
+  Text, 
+  Button, 
+  WrapperButton, 
+  WrapperContentRight, 
+  WrapperContentMiddle 
+} from './HomePage.style';
 
 // IMAGES
 import FourmiBleu from '../../public/image/FourmiBleu-removebg-preview.png';
@@ -23,30 +37,29 @@ const HomePage = () => {
 
           <WrapperContentMiddle>
             <WrapperContentLeft>
-            <Image 
-              src={boiteDeDialogue}
-              alt={'Boite De dialogue'}
-              width={569}
-              height={404}
-            />
-            <Image 
-              className="img"
-              src={FourmiBleu}
-              alt={'FourmiBleu'}
-            />
-          </WrapperContentLeft>
-          
-          <WrapperContentRight>
+              <Image 
+                src={boiteDeDialogue}
+                alt={'Boite De dialogue'}
+                width={569}
+                height={404}
+              />
+              <Image 
+                className="img"
+                src={FourmiBleu}
+                alt={'FourmiBleu'}
+              />
+            </WrapperContentLeft>
 
+          <WrapperContentRight>
             <WrapperButton>
-            <Link href="/Register/Demandeur_offre">
+            <Link href="/Register/Demandeur_competence">
               <a>
                 <Button>
                   <Text>Crée un compte Demandeur de compétence</Text>
                 </Button>
               </a>
             </Link>
-            <Link href="/Login/Demandeur_offre">
+            <Link href="/Login/Demandeur_competence">
               <a>
                 <Button>
                   <Text>Connexion Demandeur de compétence</Text>
@@ -76,20 +89,20 @@ const HomePage = () => {
             <Link href="/Register/Offreur_de_competence">
               <a>
                 <Button>
-                  <Text>Crée un compte Offreur de compétence</Text>
+                  <Text>Crée un Offreur_de_competence</Text>
                 </Button>
               </a>
             </Link>
             <Link href="/Login/Offreur_de_competence">
               <a>
                 <Button>
-                  <Text>Connexion Offreur de compétence</Text>
+                  <Text>Connexion Offreur_de_competence</Text>
                 </Button>
               </a>
             </Link>
             </WrapperButton>
-
           </WrapperContentRight>
+
           </WrapperContentMiddle>
           <WrapperImageBottom>
             <Image 

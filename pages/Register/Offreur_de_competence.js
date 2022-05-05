@@ -1,4 +1,7 @@
 import React from "react";
+import Image from "next/image";
+import Link from 'next/image';
+import Footer from '../Footer/Footer';
 
 const Offreur_de_competence = () => {
   return (

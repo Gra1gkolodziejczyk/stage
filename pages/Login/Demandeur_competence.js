@@ -1,6 +1,6 @@
 import React from "react";
+import Link from 'next/link';
 import Footer from '../Footer/Footer';
-import Link from "next/link";
 
 import WrapperContent, {
 WrapperInscription,
@@ -10,25 +10,27 @@ WrapperInput,
 WrapperButton,
 Button,
 Text
-} from './Institutionnel.style';
+} from './Demandeur_competence.style';
 
-const Institutionnel = () => {
+const Demandeur_competence  = () => {
   return (
     <WrapperContent>
+    
       <WrapperInscription>
-      <Title>Email</Title>
+      <Title>Pseudo</Title>
         <WrapperInput>
-          <input placeholder="Mail" />
+          <input placeholder="Pseudo" />
         </WrapperInput>
         <Title>Mot de passe</Title>
         <WrapperInput>
           <input placeholder="Mot de passe" />
         </WrapperInput>
         <Subtitle>Pas encore de compte ?
-          <Link href="/Register/Institutionnel">
+          <Link href="/Register/Demandeur_competence">
             <a>Inscrivez-vous</a>
           </Link>
         </Subtitle>
+        
         <WrapperButton>
         <Button>
           <Link href="/">
@@ -48,7 +50,7 @@ const Institutionnel = () => {
         </WrapperInscription>
         <Footer />
     </WrapperContent>
-  )
+  );
 }
 
-export default Institutionnel;
+export default Demandeur_competence;
