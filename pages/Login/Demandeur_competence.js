@@ -15,7 +15,6 @@ Text
 const Demandeur_competence  = () => {
   return (
     <WrapperContent>
-    
       <WrapperInscription>
       <Title>Pseudo</Title>
         <WrapperInput>

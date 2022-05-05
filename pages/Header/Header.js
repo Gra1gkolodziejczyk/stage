@@ -37,12 +37,7 @@ const Header = () => {
         <ImgWrapperRight>
           <Link href="/profile">
             <a>
-              <Image
-                src={Profil}
-                alt={"Profile"}
-                height={50}
-                width={50}
-              />
+              <Image src={Profil} alt={"Profile"} height={50} width={50} />
             </a>
           </Link>
           <Text>Jhon</Text>
