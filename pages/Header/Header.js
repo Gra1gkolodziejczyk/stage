@@ -46,7 +46,7 @@ const Header = () => {
 
       <ContainerMenu>
         <WrapperTitle>
-          <Link href="/accueil">
+          <Link href="/">
             <a>
               <Title>Accueil</Title>
             </a>
