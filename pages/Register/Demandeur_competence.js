@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from 'next/image';
 import Footer from '../Footer/Footer';
 
-const Institutionnel = () => {
+const Demandeur_competence = () => {
   return (
     <WrapperContent>
       <WrapperInscription>
@@ -49,4 +49,4 @@ const Institutionnel = () => {
   )
 }
 
-export default Institutionnel;
+export default Demandeur_competence;

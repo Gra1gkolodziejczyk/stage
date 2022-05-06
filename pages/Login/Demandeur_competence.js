@@ -1,32 +1,43 @@
 import React from "react";
-import Image from "next/image";
-import Link from 'next/image';
+import Link from 'next/link';
 import Footer from '../Footer/Footer';
 
-const Offreur_de_competence = () => {
+import WrapperContent, {
+WrapperInscription,
+Title,
+Subtitle,
+WrapperInput,
+WrapperButton,
+Button,
+Text
+} from './Demandeur_competence.style';
+
+const Demandeur_competence  = () => {
   return (
     <WrapperContent>
       <WrapperInscription>
       <Title>Pseudo</Title>
         <WrapperInput>
-          <input placeholder="Speudo" />
+          <input placeholder="Pseudo" />
         </WrapperInput>
         <Title>Mot de passe</Title>
         <WrapperInput>
           <input placeholder="Mot de passe" />
         </WrapperInput>
-        <Title>Confirmer mot de passe</Title>
-        <WrapperInput>
-          <input placeholder="Confirmer mot de passe" />
-        </WrapperInput>
-        <Subtitle>Vous avez déjà un compte ?
-          <Link href="/Login/Demandeur_competence">
-            <a>Connectez-vous</a>
+        <Subtitle>Pas encore de compte ?
+          <Link href="/Register/Demandeur_competence">
+            <a>Inscrivez-vous</a>
           </Link>
         </Subtitle>
         
         <WrapperButton>
-        {/* Wrapper coche */}
+        <Button>
+          <Link href="/">
+          <a>
+            <Text>Changer de mot de passe</Text>
+          </a>
+          </Link>
+        </Button>
         <Button>
           <Link href="/">
           <a>
@@ -38,7 +49,7 @@ const Offreur_de_competence = () => {
         </WrapperInscription>
         <Footer />
     </WrapperContent>
-  )
+  );
 }
 
-export default Offreur_de_competence;
+export default Demandeur_competence;

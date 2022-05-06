@@ -1,4 +1,5 @@
 import React from "react";
+
 import HeaderWrapper, {
   ImgWrapperLeft,
   ImgWrapperRight,
@@ -7,6 +8,8 @@ import HeaderWrapper, {
   WrapperTitle,
   Title,
 } from "./Header.style";
+
+// NEXT WIDGETS
 import Image from "next/image";
 import Link from "next/link";
 
@@ -30,6 +33,7 @@ const Header = () => {
             </a>
           </Link>
         </ImgWrapperLeft>
+
         <ImgWrapperRight>
           <Link href="/profile">
             <a>
