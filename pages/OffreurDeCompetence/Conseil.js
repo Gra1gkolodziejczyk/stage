@@ -8,6 +8,7 @@ import Container, {
   Button,
   TextTop,
   Conseils,
+  WrapperConseilsCard
 } from "./Conseil.style";
 
 const Conseil = () => {
@@ -21,6 +22,7 @@ const Conseil = () => {
             attentivement les conseils ci-dessous
           </TextTop>
         </Conseils>
+        <WrapperConseilsCard>
         <ConseilsCard>
           <Text>
             Prenez le temps de consulter tous les outils à votre disposition
@@ -39,6 +41,7 @@ const Conseil = () => {
             possible de le réaliser en plusieurs fois
           </Text>
         </ConseilsCard>
+        </WrapperConseilsCard>
         <Link href="/OffreurDeCompetence/Raison">
           <a>
             <Button>Commencez votre PortraiScopie</Button>

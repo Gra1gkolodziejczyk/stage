@@ -3,7 +3,7 @@ import styled from "styled-components";
 const FooterWrapper = styled.div`
   background-color: #3b3361;
   color: white;
-  display: flex;
+  display: flex;  
 `;
 
 export const ImageWrapper = styled.div`
