@@ -38,6 +38,7 @@ export const TextTop = styled.h2`
   width: 650px;
   height: 75px;
   padding: 10px;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
 export const WrapperConseilsCard = styled.div`
