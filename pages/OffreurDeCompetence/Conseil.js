@@ -8,7 +8,8 @@ import Container, {
   Button,
   TextTop,
   Conseils,
-  WrapperConseilsCard
+  WrapperConseilsCard,
+  ButtonLink,
 } from "./Conseil.style";
 
 const Conseil = () => {
@@ -23,30 +24,32 @@ const Conseil = () => {
           </TextTop>
         </Conseils>
         <WrapperConseilsCard>
-        <ConseilsCard>
-          <Text>
-            Prenez le temps de consulter tous les outils à votre disposition
-            comme les définitions ou le sommaire
-          </Text>
-        </ConseilsCard>
-        <ConseilsCard>
-          <Text>
-            Munissez-vous de tous documents retraçant votre parcours
-            professionnel (contrat de travail, fiche de poste, ...)
-          </Text>
-        </ConseilsCard>
-        <ConseilsCard>
-          <Text>
-            Vous pouvez enrichir votre PortraiScopie à votre rythme. Il est
-            possible de le réaliser en plusieurs fois
-          </Text>
-        </ConseilsCard>
+          <ConseilsCard>
+            <Text>
+              Prenez le temps de consulter tous les outils à votre disposition
+              comme les définitions ou le sommaire
+            </Text>
+          </ConseilsCard>
+          <ConseilsCard>
+            <Text>
+              Munissez-vous de tous documents retraçant votre parcours
+              professionnel (contrat de travail, fiche de poste, ...)
+            </Text>
+          </ConseilsCard>
+          <ConseilsCard>
+            <Text>
+              Vous pouvez enrichir votre PortraiScopie à votre rythme. Il est
+              possible de le réaliser en plusieurs fois
+            </Text>
+          </ConseilsCard>
         </WrapperConseilsCard>
-        <Link href="/OffreurDeCompetence/Raison">
-          <a>
-            <Button>Commencez votre PortraiScopie</Button>
-          </a>
-        </Link>
+        <ButtonLink>
+          <Link href="/OffreurDeCompetence/Raison">
+            <a>
+              <Button>Commencez votre PortraiScopie</Button>
+            </a>
+          </Link>
+        </ButtonLink>
       </Container>
       <Footer />
     </>

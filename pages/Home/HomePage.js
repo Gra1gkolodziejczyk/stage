@@ -50,14 +50,14 @@ const HomePage = () => {
 
         <WrapperContentRight>
           <WrapperButton>
-            <Link href="/Register/Demandeur_offre">
+            <Link href="/Register/Demandeur_competence">
               <a>
                 <Button>
                   <Text>Crée un compte Demandeur de compétence</Text>
                 </Button>
               </a>
             </Link>
-            <Link href="/Login/Demandeur_offre">
+            <Link href="/Login/Demandeur_competence">
               <a>
                 <Button>
                   <Text>Connexion Demandeur de compétence</Text>

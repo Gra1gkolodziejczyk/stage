@@ -6,37 +6,61 @@ const Container = styled.div`
   min-height: 72.5vh;
 `;
 
-export const Conseils = styled.div``;
+export const Conseils = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+`;
 
 export const ConseilsCard = styled.div`
-  display: flex;
-  border: black 1px solid;
+  font-family: "Lato";
+  border: 1px solid #2a3985;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
-  width: 30%;
-  margin: 0 20px;
-  margin-top: 5%;
+  width: 400px;
   height: 400px;
+  display: flex;
 `;
 
 export const Text = styled.h2`
   display: flex;
   align-items: center;
   text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
 `;
 
 export const TextTop = styled.h2`
-  margin: 10px 300px;
-  padding: 10px 10px;
   color: white;
   border-radius: 20px;
   background-color: #f2bf3d;
+  width: 650px;
+  height: 75px;
+  padding: 10px;
 `;
 
 export const WrapperConseilsCard = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding-top: 80px;
 `;
 
-export const Button = styled.button``;
+export const ButtonLink = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30px;
+  padding-top: 30px;
+`;
+
+export const Button = styled.button`
+  background-color: #2a3985;
+  color: white;
+  font-size: 18px;
+  height: 40px;
+  width: 350px;
+  border-radius: 20px;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+`;
 
 export default Container;
