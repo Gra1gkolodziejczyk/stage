@@ -14,6 +14,7 @@ export const Conseils = styled.div`
 `;
 
 export const ConseilsCard = styled.div`
+  background-color: white;
   font-family: "Lato";
   border: 1px solid #2a3985;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
