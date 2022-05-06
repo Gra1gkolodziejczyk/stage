@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 const WrapperContent = styled.div``;
 export const WrapperInscription = styled.div``;
 export const Title = styled.h2``;
