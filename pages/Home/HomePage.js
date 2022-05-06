@@ -1,13 +1,7 @@
-// IMPORT REACT
 import React from "react";
-
-// NEXT WIDGETS
 import Image from "next/image";
 import Link from "next/link";
-
-// IMPORT COMPONENTS
-import {
-  WrapperContent,
+import WrapperContent, {
   WrapperContentLeft,
   WrapperImageTop,
   WrapperImageBottom,
@@ -28,12 +22,13 @@ const HomePage = () => {
   return (
     <WrapperContent>
       <WrapperImageTop>
-        <Image 
-          src={Myrhmica} 
-          alt={"Myrhmica"} 
-          width={300} 
-          height={200} 
-          />
+        <Image
+          src={Myrhmica}
+          alt={"Myrhmica"}
+          quality={100}
+          width={175}
+          height={110}
+        />
       </WrapperImageTop>
 
       <WrapperContentMiddle>
@@ -41,26 +36,28 @@ const HomePage = () => {
           <Image
             src={boiteDeDialogue}
             alt={"Boite De dialogue"}
-            width={569}
-            height={404}
+            quality={100}
+            width={500}
+            height={400}
           />
-          <Image 
-            className="img" 
-            src={FourmiBleu} 
-            alt={"FourmiBleu"} 
-            />
+          <Image
+            className="img"
+            src={FourmiBleu}
+            alt={"FourmiBleu"}
+            quality={100}
+          />
         </WrapperContentLeft>
 
         <WrapperContentRight>
           <WrapperButton>
-            <Link href="/Register/Demandeur_competence">
+            <Link href="/Register/Demandeur_offre">
               <a>
                 <Button>
                   <Text>Crée un compte Demandeur de compétence</Text>
                 </Button>
               </a>
             </Link>
-            <Link href="/Login/Demandeur_competence">
+            <Link href="/Login/Demandeur_offre">
               <a>
                 <Button>
                   <Text>Connexion Demandeur de compétence</Text>
@@ -90,14 +87,14 @@ const HomePage = () => {
             <Link href="/Register/Offreur_de_competence">
               <a>
                 <Button>
-                  <Text>Crée un Offreur_de_competence</Text>
+                  <Text>Crée un compte Offreur de compétence</Text>
                 </Button>
               </a>
             </Link>
             <Link href="/Login/Offreur_de_competence">
               <a>
                 <Button>
-                  <Text>Connexion Offreur_de_competence</Text>
+                  <Text>Connexion Offreur de compétence</Text>
                 </Button>
               </a>
             </Link>
@@ -108,8 +105,9 @@ const HomePage = () => {
         <Image
           src={PortraiScopie}
           alt={"PortraiScopie"}
-          width={410}
-          height={80}
+          quality={100}
+          width={400}
+          height={100}
         />
       </WrapperImageBottom>
     </WrapperContent>
