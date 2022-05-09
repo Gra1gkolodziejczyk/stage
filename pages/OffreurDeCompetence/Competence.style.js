@@ -3,17 +3,11 @@ import styled from "styled-components";
 const WrapperContent = styled.div``;
 
 export const WrapperTitle = styled.div``;
-
-export const Title = styled.h1``;
-
+export const Titre = styled.h1``;
 export const Text = styled.h2``;
-
-export const WrapperCocheLeft = styled.div``;
-
-export const WrapperCocheRight = styled.div``;
-
-export const Coche = styled.button``;
-
+export const WrapperCompetence = styled.div``;
+export const WrapperInput = styled.div``;
 export const ButtonLink = styled.button``;
+export const WrapperButton = styled.div``;
 
 export default WrapperContent;

@@ -1,52 +1,53 @@
 import styled from "styled-components";
 
-const WrapperContent = styled.div``;
+const WrapperContent = styled.div`
+  font-family: Sawarabi Gothic;
+`;
+
+export const WrapperImage = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+`;
 
 export const WrapperInscription = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 250px 0 0 0 ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 150px;
 `;
 export const Title = styled.h2`
-    font-size: 20px;
+  font-size: 20px;
 `;
 export const Subtitle = styled.h4`
-    font-size: 17px;
+  font-size: 17px;
+  a {
+    text-decoration: underline;
+  }
 `;
 export const WrapperInput = styled.div`
-    input {
-        height: 50px;
-        width: 500px;
-        border-radius: 10px;
-    }
+  input {
+    padding-left: 20px;
+    font-size: 20px;
+    height: 75px;
+    width: 600px;
+    border-radius: 15px;
+  }
 `;
-export const WrapperButton = styled.div`
-   
-`;
+export const WrapperButton = styled.div``;
 
 export const Button = styled.button`
-    background-color: #2A3985;
-    border-radius: 30px;
-    width: 200px;
-    &:Text {
-        color: white;
-    }
-`;
-export const Text = styled.p`
-    color: black;
-`;
+  margin: 20px;
+  background-color: #2a3985;
+  color: white;
+  border-radius: 30px;
+  width: 200px;
 
-export const WrapperCoche = styled.div`
-    button {
-        background-color: white;
-        height: 10px;
-        width: 10px;
-    }
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  &:text {
+    color: white;
+  }
 `;
+export const Text = styled.p``;
 
 export default WrapperContent;

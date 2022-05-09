@@ -16,7 +16,7 @@ const Demandeur_competence = () => {
   return (
     <WrapperContent>
       <WrapperInscription>
-      <Title>Création du compte</Title>
+        <Title>Création du compte</Title>
         <WrapperInput>
           <input placeholder="Creation du compte" />
         </WrapperInput>
@@ -24,7 +24,7 @@ const Demandeur_competence = () => {
         <WrapperInput>
           <input placeholder="Entité / Raisons sociale ou Nom Prénom" />
         </WrapperInput>
-      <Title>Mail</Title>
+        <Title>Mail</Title>
         <WrapperInput>
           <input placeholder="Mail" />
         </WrapperInput>
@@ -36,23 +36,24 @@ const Demandeur_competence = () => {
         <WrapperInput>
           <input placeholder="Confirmer mot de passe" />
         </WrapperInput>
-        <Subtitle>Vous avez déjà un compte ?
+        <Subtitle>
+          Vous avez déjà un compte ?
           <Link href="/Login/Demandeur_competence">
             <a>Connectez-vous</a>
           </Link>
         </Subtitle>
-        
+
         <WrapperButton>
         <Button>
-          <Link href="/">
+          <Link href="/OffreurDeCompetence/Conseil">
           <a>
             <Text>Connexion</Text>
           </a>
           </Link>
         </Button>
         </WrapperButton>
-        </WrapperInscription>
-        <Footer />
+      </WrapperInscription>
+      <Footer />
     </WrapperContent>
   );
 }

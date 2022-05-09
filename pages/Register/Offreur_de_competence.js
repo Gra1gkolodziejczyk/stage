@@ -16,9 +16,9 @@ const Offreur_de_competence = () => {
   return (
     <WrapperContent>
       <WrapperInscription>
-      <Title>Pseudo</Title>
+        <Title>Pseudo</Title>
         <WrapperInput>
-          <input placeholder="Speudo" />
+          <input placeholder="Pseudo" />
         </WrapperInput>
         <Title>Mot de passe</Title>
         <WrapperInput>
@@ -28,26 +28,27 @@ const Offreur_de_competence = () => {
         <WrapperInput>
           <input placeholder="Confirmer mot de passe" />
         </WrapperInput>
-        <Subtitle>Vous avez déjà un compte ?
+        <Subtitle>
+          Vous avez déjà un compte ?
           <Link href="/Login/Demandeur_competence">
             <a>Connectez-vous</a>
           </Link>
         </Subtitle>
-        
+
         <WrapperButton>
-        {/* Wrapper coche */}
-        <Button>
-          <Link href="/">
-          <a>
-            <Text>Connexion</Text>
-          </a>
-          </Link>
-        </Button>
+          {/* Wrapper coche */}
+          <Button>
+            <Link href="/OffreurDeCompetence/Conseil">
+              <a>
+                <Text>Connexion</Text>
+              </a>
+            </Link>
+          </Button>
         </WrapperButton>
-        </WrapperInscription>
-        <Footer />
+      </WrapperInscription>
+      <Footer />
     </WrapperContent>
-  )
-}
+  );
+};
 
 export default Offreur_de_competence;
