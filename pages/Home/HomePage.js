@@ -13,9 +13,9 @@ import WrapperContent, {
 } from "./HomePage.style";
 
 // IMAGES
-import FourmiBleu from "../../public/image/FourmiBleu-removebg-preview.png";
+import FourmiBleu from "../../public/image/FourmiBleu-remove.png";
 import boiteDeDialogue from "../../public/image/boitededialogue.png";
-import Myrhmica from "../../public/image/Myrhmica_logocolor-removebg.png";
+import Myrhmica from "../../public/image/Myrhmica-color-remove.png";
 import PortraiScopie from "../../public/image/PortraitScopie-remove.png";
 
 const HomePage = () => {
