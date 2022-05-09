@@ -1,8 +1,10 @@
+// import des packages nécessaire au bon fonctionnement
 import React from "react";
 import Link from "next/link";
 import Footer from "../Footer/Footer";
 import Image from "next/image";
 
+// import contenue du fichier pour styliser
 import WrapperContent, {
   WrapperInscription,
   Title,
@@ -11,12 +13,34 @@ import WrapperContent, {
   WrapperButton,
   Button,
   Text,
-  WrapperCoche,
+  WrapperImage,
 } from "./Offreur_de_competence.style";
+
+// import des image
+import PortraitScopie from "../../public/image/PortraitScopie-remove.png";
+import Myrhmica from "../../public/image/Myrhmica-color-remove.png";
 
 const Offreur_de_competence = () => {
   return (
     <WrapperContent>
+      <WrapperImage>
+        <Link href="/Myrhmica">
+          <a>
+            <Image src={Myrhmica} alt={"Myrhmica"} quality={100} />
+          </a>
+        </Link>
+        <Link href="/portraitscopie">
+          <a>
+            <Image
+              src={PortraitScopie}
+              alt={"PortraitScopie"}
+              quality={100}
+              width={300}
+              height={75}
+            />
+          </a>
+        </Link>
+      </WrapperImage>
       <WrapperInscription>
         <Title>Email</Title>
         <WrapperInput>
@@ -26,25 +50,12 @@ const Offreur_de_competence = () => {
         <WrapperInput>
           <input placeholder="Mot de passe" />
         </WrapperInput>
-        <Title>Confirmer Mot de passe</Title>
-        <WrapperInput>
-          <input placeholder="Confirmer votre Mot de passe" />
-        </WrapperInput>
         <Subtitle>
           Pas encore de compte ?
           <Link href="/Register/Offreur_de_competence">
             <a>Inscrivez-vous</a>
           </Link>
         </Subtitle>
-        <WrapperCoche>
-          <Button></Button>
-          <Text>
-            J'ai pris connnaissance et j'accepte la
-            <Link href="/">
-              <a> politique de confidentialité</a>
-            </Link>
-          </Text>
-        </WrapperCoche>
         <WrapperButton>
           <Link href="/">
             <a>
