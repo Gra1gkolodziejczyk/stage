@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const WrapperContent = styled.div``;
+export const WrapperContent = styled.div``;
 
 export const WrapperInscription = styled.div`
     display: flex;
@@ -33,5 +33,3 @@ export const Button = styled.button`
 export const Text = styled.p`
     color: white;
 `;
-
-export default WrapperContent;

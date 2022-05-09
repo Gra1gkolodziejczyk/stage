@@ -1,17 +1,17 @@
 import React from "react";
 import Link from "next/link";
 import Footer from '../Footer/Footer';
-import Image from "next/image";
 
-import WrapperContent, {
-WrapperInscription,
-Title,
-Subtitle,
-WrapperInput,
-WrapperButton,
-Button,
-Text,
-WrapperCoche
+import {
+  WrapperContent,
+  WrapperInscription,
+  Title,
+  Subtitle,
+  WrapperInput,
+  WrapperButton,
+  Button,
+  Text,
+  WrapperCoche
 } from './Offreur_de_competence.style';
 
 const Offreur_de_competence = () => {

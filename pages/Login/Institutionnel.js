@@ -2,7 +2,8 @@ import React from "react";
 import Footer from "../Footer/Footer";
 import Link from "next/link";
 
-import WrapperContent, {
+import {
+  WrapperContent,
   WrapperInscription,
   Title,
   Subtitle,

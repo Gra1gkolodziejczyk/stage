@@ -1,7 +1,16 @@
 import React from "react";
-import Image from "next/image";
-import Link from 'next/image';
+import Link from 'next/link';
 import Footer from '../Footer/Footer';
+
+import WrapperContent, {
+  WrapperInscription,
+  Title,
+  WrapperInput,
+  Subtitle,
+  WrapperButton,
+  Button,
+  Text
+} from "./Demandeur_competence.style";
 
 const Demandeur_competence = () => {
   return (
@@ -34,7 +43,6 @@ const Demandeur_competence = () => {
         </Subtitle>
         
         <WrapperButton>
-        {/* Wrapper coche */}
         <Button>
           <Link href="/">
           <a>
@@ -46,7 +54,7 @@ const Demandeur_competence = () => {
         </WrapperInscription>
         <Footer />
     </WrapperContent>
-  )
+  );
 }
 
 export default Demandeur_competence;

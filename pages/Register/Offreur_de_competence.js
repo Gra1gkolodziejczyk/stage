@@ -1,7 +1,16 @@
 import React from "react";
-import Image from "next/image";
-import Link from 'next/image';
+import Link from 'next/link';
 import Footer from '../Footer/Footer';
+
+import WrapperContent,{
+  WrapperInscription,
+  Title,
+  Text,
+  Subtitle,
+  Button,
+  WrapperInput,
+  WrapperButton,
+} from "./Institutionnel.style";
 
 const Offreur_de_competence = () => {
   return (
