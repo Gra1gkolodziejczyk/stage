@@ -1,10 +1,9 @@
 // import des packages nécessaire au bon fonctionnement
 import React from "react";
 import Link from "next/link";
-import Footer from '../Footer/Footer';
+import Footer from "../Footer/Footer";
 
-import {
-  WrapperContent,
+import WrapperContent, {
   WrapperInscription,
   Title,
   Subtitle,
@@ -12,29 +11,11 @@ import {
   WrapperButton,
   Button,
   Text,
-} from './Offreur_de_competence.style';
+} from "./Offreur_de_competence.style";
 
 const Offreur_de_competence = () => {
   return (
     <WrapperContent>
-      <WrapperImage>
-        <Link href="/Myrhmica">
-          <a>
-            <Image src={Myrhmica} alt={"Myrhmica"} quality={100} />
-          </a>
-        </Link>
-        <Link href="/portraitscopie">
-          <a>
-            <Image
-              src={PortraitScopie}
-              alt={"PortraitScopie"}
-              quality={100}
-              width={300}
-              height={75}
-            />
-          </a>
-        </Link>
-      </WrapperImage>
       <WrapperInscription>
         <Title>Email</Title>
         <WrapperInput>

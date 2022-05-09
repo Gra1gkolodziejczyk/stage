@@ -4,12 +4,6 @@ const WrapperContent = styled.div`
   font-family: Sawarabi Gothic;
 `;
 
-export const WrapperImage = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-`;
-
 export const WrapperInscription = styled.div`
   display: flex;
   justify-content: center;
@@ -21,6 +15,8 @@ export const Title = styled.h2`
   font-size: 20px;
 `;
 export const Subtitle = styled.h4`
+  padding-top: 15px;
+  padding-left: 300px;
   font-size: 17px;
   a {
     text-decoration: underline;
@@ -35,7 +31,9 @@ export const WrapperInput = styled.div`
     border-radius: 15px;
   }
 `;
-export const WrapperButton = styled.div``;
+export const WrapperButton = styled.div`
+  padding-left: 160px;
+`;
 
 export const Button = styled.button`
   margin: 20px;

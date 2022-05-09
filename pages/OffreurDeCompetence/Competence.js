@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Header from "../Header/Header";
+import Header2 from "../Header/Header2";
 import Footer from "../Footer/Footer";
 import WrapperContent, {
   WrapperTitle,
@@ -15,7 +15,7 @@ import WrapperContent, {
 const Competence = () => {
   return (
     <>
-      <Header />
+      <Header2 />
       <WrapperContent>
         <WrapperTitle>
           <Titre>Mon PortraiScopie Mes Compétences mises en Avant!</Titre>

@@ -1,47 +1,56 @@
 import React from "react";
 
 import HeaderWrapper, {
-  ImgWrapperLeft,
-  ImgWrapperRight,
-  Text,
+  WrapperImage,
   ContainerMenu,
   WrapperTitle,
   Title,
-} from "./Header.style";
+  Text,
+} from "./Header2.style";
 
 // NEXT WIDGETS
 import Image from "next/image";
 import Link from "next/link";
 
 // IMAGES
+import Myrhmica from "../../public/image/Myrhmica-color-remove.png";
 import PortraitScopie from "../../public/image/PortraitScopie-remove.png";
-import Profil from "../../public/image/profil.png";
+import Profile from "../../public/image/profil.png";
 
-const Header = () => {
+const Header2 = () => {
   return (
     <>
       <HeaderWrapper>
-        <ImgWrapperLeft>
+        <WrapperImage>
+          <Link href="/">
+            <a>
+              <Image src={Myrhmica} alt={"Myrhmica"} quality={100} />
+            </a>
+          </Link>
           <Link href="/portraitscopie">
             <a>
               <Image
                 src={PortraitScopie}
                 alt={"PortraitScopie"}
+                quality={100}
                 width={300}
                 height={75}
               />
             </a>
           </Link>
-        </ImgWrapperLeft>
-
-        <ImgWrapperRight>
           <Link href="/profile">
             <a>
-              <Image src={Profil} alt={"Profile"} height={50} width={50} />
+              <Image
+                src={Profile}
+                alt={"Profile"}
+                quality={100}
+                width={65}
+                height={50}
+              />
+              <Text>Profile</Text>
             </a>
           </Link>
-          <Text>Jhon</Text>
-        </ImgWrapperRight>
+        </WrapperImage>
       </HeaderWrapper>
 
       <ContainerMenu>
@@ -51,7 +60,7 @@ const Header = () => {
               <Title>Accueil</Title>
             </a>
           </Link>
-          <Link href="/offres">
+          <Link href="/">
             <a>
               <Title>Offres</Title>
             </a>
@@ -62,4 +71,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Header2;

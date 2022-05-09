@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Header from "../Header/Header";
+import Header1 from "../Header/Header1";
 import Footer from "../Footer/Footer";
 
 import WrapperContent, {
@@ -16,7 +16,7 @@ import WrapperContent, {
 const Raison = () => {
   return (
     <>
-      <Header />
+      <Header1 />
       <WrapperContent>
         <WrapperTitle>
           <Title>Pour quoi souhaitez-vous faire votre PortraiScopie ?</Title>
