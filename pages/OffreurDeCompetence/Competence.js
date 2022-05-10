@@ -42,7 +42,7 @@ const Competence = () => {
               </Link>
             </ButtonLink>
             <ButtonLink>
-              <Link href="/OffreurDeCompetence/">
+              <Link href="/OffreurDeCompetence/Metier">
                 <a>
                   <Text>Valider</Text>
                 </a>

@@ -2,9 +2,13 @@
 import React from "react";
 import Link from "next/link";
 import Footer from '../Footer/Footer';
+import Image from 'next/image';
 
-import {
-  WrapperContent,
+// Import Images
+import Myrhmica from '../../public/image/Myrhmica_remove.png';
+import PortraitScopie from '../../public/image/PortraitScopie-remove.png';
+
+import WrapperContent, {
   WrapperInscription,
   Title,
   Subtitle,
@@ -12,6 +16,7 @@ import {
   WrapperButton,
   Button,
   Text,
+  WrapperImage,
 } from './Offreur_de_competence.style';
 
 const Offreur_de_competence = () => {
@@ -20,7 +25,13 @@ const Offreur_de_competence = () => {
       <WrapperImage>
         <Link href="/Myrhmica">
           <a>
-            <Image src={Myrhmica} alt={"Myrhmica"} quality={100} />
+            <Image 
+              src={Myrhmica} 
+              alt={"Myrhmica"} 
+              width={300} 
+              height={75} 
+              quality={100} 
+              />
           </a>
         </Link>
         <Link href="/portraitscopie">
