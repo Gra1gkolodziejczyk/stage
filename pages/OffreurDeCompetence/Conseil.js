@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Header from "../Header/Header";
+import Header1 from "../Header/Header1";
 import Footer from "../Footer/Footer";
 import Container, {
   ConseilsCard,
@@ -15,7 +15,7 @@ import Container, {
 const Conseil = () => {
   return (
     <>
-      <Header />
+      <Header1 />
       <Container>
         <Conseils>
           <TextTop>

@@ -3,8 +3,11 @@ import styled from "styled-components";
 const FooterWrapper = styled.div`
   background-color: #3b3361;
   color: white;
-  display: flex;
-  margin-top: 8.5vh;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
 `;
 
 export const ImageWrapper = styled.div`

@@ -3,6 +3,8 @@ import React from "react";
 import Link from "next/link";
 import Footer from '../Footer/Footer';
 import Image from 'next/image';
+import axios from 'axios'
+import config from '../../config.json';
 
 // Import Images
 import Myrhmica from '../../public/image/Myrhmica_remove.png';

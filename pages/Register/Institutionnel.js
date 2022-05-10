@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import Link from 'next/link';
 import Footer from '../Footer/Footer';
-import Header from '../Header/Header2';
+import axios from 'axios'
+import config from '../../config.json';
 
 import WrapperContent,{
   WrapperInscription,
@@ -41,7 +42,6 @@ const Institutionnel = () => {
 
   return (
     <WrapperContent>
-      <Header />
       <WrapperInscription>
         <Title>Entité / Raisons sociale ou Nom Prénom</Title>
         <WrapperInput>
