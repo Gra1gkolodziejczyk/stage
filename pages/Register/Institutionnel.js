@@ -105,7 +105,7 @@ const Institutionnel = () => {
           */}
         <Subtitle>
           Vous avez déjà un compte ?
-          <Link href="/Login/Demandeur_competence">
+          <Link href="/Login/Institutionnel">
             <a>Connectez-vous</a>
           </Link>
         </Subtitle>

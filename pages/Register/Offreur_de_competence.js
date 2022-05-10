@@ -105,7 +105,7 @@ const Offreur_de_competence = () => {
           */}
         <Subtitle>
           Vous avez déjà un compte ?
-          <Link href="/Login/Demandeur_competence">
+          <Link href="/Login/Offreur_de_competence">
             <a>Connectez-vous</a>
           </Link>
         </Subtitle>
