@@ -11,10 +11,10 @@ import Myrhmica from "../../public/image/Myrhmica_remove.png";
 const Footer = () => {
   return (
     <FooterWrapper>
-      <ImageWrapper>
-        <Image src={Myrhmica} alt={"Myrhmica"} width={200} height={120} />
-      </ImageWrapper>
       <ContentWrapper>
+        <ImageWrapper>
+          <Image src={Myrhmica} alt={"Myrhmica"} quality={100} />
+        </ImageWrapper>
         <Text>Contact</Text>
         <Text>Mention Légales</Text>
         <Text>Politique de confidentialité</Text>
