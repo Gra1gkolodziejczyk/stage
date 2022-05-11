@@ -33,7 +33,7 @@ const Offreur_de_competence = () => {
       body:JSON.stringify(item),
       headers : {
         "Content-Type" : "application/json",
-        "Accept" : "application/json"
+        "accept" : "application/json"
       }
     });
     result = await result.json();

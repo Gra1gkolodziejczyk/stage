@@ -22,18 +22,18 @@ const Institutionnel = () => {
   const [pseudo, setPseudo] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  
   async function signUp() {
     
     let item = {entityName, firstName, lastName, pseudo, email, password};
     console.warn(item);
 
-    let result = await fetch(config.api_url+"/api/users/", {
+    let result = await fetch(config.api_url+"api/users/", {
       method: "POST",
       body:JSON.stringify(item),
       headers : {
         "Content-Type" : "application/json",
-        "Accept" : "application/json"
+        "accept" : "application/json"
       }
     });
     result = await result.json();
