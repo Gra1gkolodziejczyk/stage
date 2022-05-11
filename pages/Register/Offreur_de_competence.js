@@ -19,25 +19,26 @@ const Offreur_de_competence = () => {
   const [entityName, setEntityName] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [pseudo, setPseudo] = useState("");
   const [email, setEmail] = useState("");
+  const [pseudo, setPseudo] = useState("");
   const [password, setPassword] = useState("");
 
   async function signUp() {
-    
-    let item = {entityName, firstName, lastName, pseudo, email, password};
+
+    let item = { entityName, firstName, lastName, email, pseudo, password}
     console.warn(item);
 
     let result = await fetch(config.api_url+"/api/users/", {
       method: "POST",
-      body:JSON.stringify(item),
-      headers : {
-        "Content-Type" : "application/json",
-        "accept" : "application/json"
+      body: JSON.stringify(item),
+      headers:{
+        'Content-Type' : 'application/json',
+        'accept' : 'application/json'
       }
     });
     result = await result.json();
-    console.warn("result");
+    localStorage.setItem(JSON.stringify(result));
+    console.warn(result);
   }
 
   return (
