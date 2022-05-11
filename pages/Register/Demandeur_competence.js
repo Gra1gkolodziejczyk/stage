@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {useState} from "react";
 import Link from 'next/link';
 import Footer from '../Footer/Footer';
 import config from '../../config.json';
@@ -23,7 +23,8 @@ const Demandeur_competence = () => {
   const [password, setPassword] = useState("");
 
   async function signUp() {
-    let item = { entityName, firstName, lastName, email, pseudo, password}
+
+    let item = { entityName, firstName, lastName, email, pseudo, password}
     console.log(item);
 
     let result = await fetch(config.api_url+"/api/users/", {
@@ -35,7 +36,8 @@ const Demandeur_competence = () => {
       }
     });
     result = await result.json();
-    localStorage.setItem('user-info', JSON.stringify(result));
+    localStorage.setItem(JSON.stringify(result));
+    console.log(result);
   }
 
   return (
@@ -46,7 +48,8 @@ const Demandeur_competence = () => {
           <input 
             type="text"
             placeholder="Entité / Raisons sociale"
-
+            value={entityName}
+            onChange={(e) => setEntityName(e.target.value)}
           />
         </WrapperInput>
         <Title>Nom</Title>
@@ -54,6 +57,8 @@ const Demandeur_competence = () => {
           <input 
             type="text"
             placeholder="Nom"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
           />
         </WrapperInput>
         <Title>Prénom</Title>
@@ -61,6 +66,8 @@ const Demandeur_competence = () => {
           <input 
             type="text"
             placeholder="Prénom"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
           />
         </WrapperInput>
         <Title>Pseudo</Title>
@@ -68,6 +75,8 @@ const Demandeur_competence = () => {
           <input 
             type="text"
             placeholder="Pseudo"
+            value={pseudo}
+            onChange={(e) => setPseudo(e.target.value)}
           />
         </WrapperInput>
         <Title>Email</Title>
@@ -75,6 +84,8 @@ const Demandeur_competence = () => {
           <input 
             type="email"
             placeholder="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </WrapperInput>
         <Title>Mot de passe</Title>
@@ -82,6 +93,8 @@ const Demandeur_competence = () => {
           <input 
             type="text"
             placeholder="Mot de passe"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
         </WrapperInput>
         {
@@ -100,7 +113,7 @@ const Demandeur_competence = () => {
         </Subtitle>
 
         <WrapperButton>
-        <Button>
+        <Button onClick={() => { signUp() }}>
           <Link href="/OffreurDeCompetence/Conseil">
           <a>
             <Text>Connexion</Text>
