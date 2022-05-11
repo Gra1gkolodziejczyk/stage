@@ -12,11 +12,9 @@ import WrapperTitle, {
   WrapperContent,
   WrapperMenuDeroulant,
   ButtonLink,
-  WrapperCoche,
-  WrapperDuCoche,
-} from "./Metier.style";
+} from "./Taches.style";
 
-const Metier = () => {
+const Taches = () => {
   return (
     <>
       <Header />
@@ -30,11 +28,18 @@ const Metier = () => {
           {/* image de la progression bar ou la coder ? */}
         </WrapperProgression>
 
-        <Divider></Divider>
         <WrapperContent>
-          <Title>Le metier exercé pour cette compétence</Title>
+          <Title>Tâches réalisées</Title>
+          {/* Image = Indices
+                    src={}
+                    alt={}
+                    width={}
+                    height={}
+                /> */}
+          <Divider></Divider>
+
           <WrapperMenuDeroulant>
-            <Text>Metier 1</Text>
+            <Text>Tâches pour cette compétence</Text>
             {/* Image 
                     src={}
                     alt={}
@@ -43,52 +48,6 @@ const Metier = () => {
                 /> */}
           </WrapperMenuDeroulant>
 
-          <Title>Date de début</Title>
-          <WrapperMenuDeroulant>
-            <Text>Mois</Text>
-            {/* Image 
-                    src={}
-                    alt={}
-                    width={}
-                    height={}
-                /> */}
-          </WrapperMenuDeroulant>
-
-          <WrapperMenuDeroulant>
-            <Text>Année</Text>
-            {/* Image 
-                    src={}
-                    alt={}
-                    width={}
-                    height={}
-                /> */}
-          </WrapperMenuDeroulant>
-
-          <Title>Date de fin</Title>
-          <WrapperMenuDeroulant>
-            <Text>Mois</Text>
-            {/* Image 
-                    src={}
-                    alt={}
-                    width={}
-                    height={}
-                /> */}
-          </WrapperMenuDeroulant>
-
-          <WrapperMenuDeroulant>
-            <Text>Année</Text>
-            {/* Image 
-                    src={}
-                    alt={}
-                    width={}
-                    height={}
-                /> */}
-          </WrapperMenuDeroulant>
-
-          <WrapperDuCoche>
-            <WrapperCoche></WrapperCoche>
-            <Text>J'occupe actuellement ce poste</Text>
-          </WrapperDuCoche>
           {/* Image du +
                     src={}
                     alt={}
@@ -98,6 +57,13 @@ const Metier = () => {
           <Text>Ajouté</Text>
           <ButtonLink>
             <Link href="/OffreurDeCompetence/Activites">
+              <a>
+                <Text>Précédent</Text>
+              </a>
+            </Link>
+          </ButtonLink>
+          <ButtonLink>
+            <Link href="/OffreurDeCompetence/Techniques">
               <a>
                 <Text>Suivant</Text>
               </a>
@@ -109,4 +75,4 @@ const Metier = () => {
   );
 };
 
-export default Metier;
+export default Taches;
