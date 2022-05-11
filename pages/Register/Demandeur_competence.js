@@ -12,6 +12,7 @@ import WrapperContent, {
   Button,
   Text
 } from "./Demandeur_competence.style";
+import axios from "axios";
 
 const Demandeur_competence = () => {
 
@@ -25,7 +26,7 @@ const Demandeur_competence = () => {
   async function signUp() {
 
     let item = { entityName, firstName, lastName, email, pseudo, password}
-    console.log(item);
+    console.warn(item);
 
     let result = await fetch(config.api_url+"/api/users/", {
       method: "POST",
@@ -35,9 +36,9 @@ const Demandeur_competence = () => {
         'accept' : 'application/json'
       }
     });
-    result = await result.json();
-    localStorage.setItem(JSON.stringify(result));
-    console.log(result);
+      result = await result.json();
+      localStorage.setItem(JSON.stringify(result));
+      console.warn(result);
   }
 
   return (
