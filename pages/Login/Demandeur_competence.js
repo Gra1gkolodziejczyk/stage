@@ -1,9 +1,13 @@
 import React, {useState} from "react";
 import Link from "next/link";
 import Footer from "../Footer/Footer";
-import Header1 from "../Header/Header1";
-import axios from 'axios'
-import config from '../../config.json';
+import Image from "next/image";
+import axios from "axios";
+import config from "../../config.json";
+
+// Import Images
+import Myrhmica from "../../public/image/Myrhmica-color-remove.png";
+import PortraitScopie from "../../public/image/PortraitScopie-remove.png";
 
 import WrapperContent, {
   WrapperInscription,
@@ -13,7 +17,8 @@ import WrapperContent, {
   WrapperButton,
   Button,
   Text,
-} from "./Demandeur_competence.style";
+  WrapperImage,
+} from "./Offreur_de_competence.style";
 
 const Demandeur_competence = () => {
 
@@ -84,4 +89,4 @@ const Demandeur_competence = () => {
   );
 };
 
-export default Demandeur_competence;
+export default Offreur_de_competence;
