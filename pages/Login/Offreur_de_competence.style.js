@@ -9,7 +9,7 @@ export const WrapperInscription = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 150px;
+  padding-top: 100px;
 `;
 export const Title = styled.h2`
   font-size: 20px;
@@ -47,5 +47,11 @@ export const Button = styled.button`
   }
 `;
 export const Text = styled.p``;
+
+export const WrapperImage = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+`;
 
 export default WrapperContent;

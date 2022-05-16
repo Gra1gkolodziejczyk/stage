@@ -12,6 +12,7 @@ import WrapperTitle, {
   WrapperContent,
   WrapperMenuDeroulant,
   ButtonLink,
+  WrapperCercle,
 } from "./Capacites.style";
 
 const Capacites = () => {
@@ -19,8 +20,10 @@ const Capacites = () => {
     <>
       <Header />
       <WrapperTitle>
-        <Title>Mon PortraiScopie</Title>
-        <Title>{/*Compétence choisie*/}</Title>
+        <WrapperCercle>
+          <Title>Mon PortraiScopie</Title>
+          <Title>{/*Compétence choisie*/}</Title>
+        </WrapperCercle>
       </WrapperTitle>
 
       <Wrapper>

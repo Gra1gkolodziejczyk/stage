@@ -5,6 +5,7 @@ const WrapperContent = styled.div``;
 export const WrapperContentLeft = styled.div`
   img {
     width: 280px;
+    height: 200px;
     display: flex;
     justify-content: center;
   }

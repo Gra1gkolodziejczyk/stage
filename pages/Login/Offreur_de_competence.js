@@ -1,14 +1,14 @@
 // import des packages nécessaire au bon fonctionnement
 import React from "react";
 import Link from "next/link";
-import Footer from '../Footer/Footer';
-import Image from 'next/image';
-import axios from 'axios'
-import config from '../../config.json';
+import Footer from "../Footer/Footer";
+import Image from "next/image";
+import axios from "axios";
+import config from "../../config.json";
 
 // Import Images
-import Myrhmica from '../../public/image/Myrhmica_remove.png';
-import PortraitScopie from '../../public/image/PortraitScopie-remove.png';
+import Myrhmica from "../../public/image/Myrhmica-color-remove.png";
+import PortraitScopie from "../../public/image/PortraitScopie-remove.png";
 
 import WrapperContent, {
   WrapperInscription,
@@ -19,31 +19,31 @@ import WrapperContent, {
   Button,
   Text,
   WrapperImage,
-} from './Offreur_de_competence.style';
+} from "./Offreur_de_competence.style";
 
 const Offreur_de_competence = () => {
   return (
     <WrapperContent>
       <WrapperImage>
-        <Link href="/Myrhmica">
+        <Link href="/">
           <a>
-            <Image 
-              src={Myrhmica} 
-              alt={"Myrhmica"} 
-              width={300} 
-              height={75} 
-              quality={100} 
-              />
+            <Image
+              src={Myrhmica}
+              alt={"Myrhmica"}
+              width={200}
+              height={125}
+              quality={100}
+            />
           </a>
         </Link>
-        <Link href="/portraitscopie">
+        <Link href="/https://myrhmica.fr.">
           <a>
             <Image
               src={PortraitScopie}
               alt={"PortraitScopie"}
               quality={100}
-              width={300}
-              height={75}
+              width={400}
+              height={100}
             />
           </a>
         </Link>

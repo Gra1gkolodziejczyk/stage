@@ -1,9 +1,14 @@
+// import des packages nécessaire au bon fonctionnement
 import React from "react";
 import Link from "next/link";
 import Footer from "../Footer/Footer";
-import Header1 from "../Header/Header1";
-import axios from 'axios'
-import config from '../../config.json';
+import Image from "next/image";
+import axios from "axios";
+import config from "../../config.json";
+
+// Import Images
+import Myrhmica from "../../public/image/Myrhmica-color-remove.png";
+import PortraitScopie from "../../public/image/PortraitScopie-remove.png";
 
 import WrapperContent, {
   WrapperInscription,
@@ -13,50 +18,71 @@ import WrapperContent, {
   WrapperButton,
   Button,
   Text,
-} from "./Demandeur_competence.style";
+  WrapperImage,
+} from "./Offreur_de_competence.style";
 
-const Demandeur_competence = () => {
+const Offreur_de_competence = () => {
   return (
-    <>
-      <Header1 />
-      <WrapperContent>
-        <WrapperInscription>
-          <Title>Pseudo</Title>
-          <WrapperInput>
-            <input placeholder="Pseudo" />
-          </WrapperInput>
-          <Title>Mot de passe</Title>
-          <WrapperInput>
-            <input placeholder="Mot de passe" />
-          </WrapperInput>
-          <Subtitle>
-            Pas encore de compte ?
-            <Link href="/Register/Demandeur_competence">
-              <a>Inscrivez-vous</a>
-            </Link>
-          </Subtitle>
-
-          <WrapperButton>
-            <Button>
-              <Link href="/">
-                <a>
-                  <Text>Changer de mot de passe</Text>
-                </a>
-              </Link>
-            </Button>
-            <Button>
-              <Link href="/OffreurDeCompetence/Conseil">
-                <a>
-                  <Text>Connexion</Text>
-                </a>
-              </Link>
-            </Button>
-          </WrapperButton>
-        </WrapperInscription>
-      </WrapperContent>
+    <WrapperContent>
+      <WrapperImage>
+        <Link href="/">
+          <a>
+            <Image
+              src={Myrhmica}
+              alt={"Myrhmica"}
+              width={200}
+              height={125}
+              quality={100}
+            />
+          </a>
+        </Link>
+        <Link href="/https:/myrhmica.fr.">
+          <a>
+            <Image
+              src={PortraitScopie}
+              alt={"PortraitScopie"}
+              quality={100}
+              width={400}
+              height={100}
+            />
+          </a>
+        </Link>
+      </WrapperImage>
+      <WrapperInscription>
+        <Title>Email</Title>
+        <WrapperInput>
+          <input placeholder="Email" />
+        </WrapperInput>
+        <Title>Mot de passe</Title>
+        <WrapperInput>
+          <input placeholder="Mot de passe" />
+        </WrapperInput>
+        <Subtitle>
+          Pas encore de compte ?
+          <Link href="/Register/Offreur_de_competence">
+            <a>Inscrivez-vous</a>
+          </Link>
+        </Subtitle>
+        <WrapperButton>
+          <Link href="/">
+            <a>
+              <Button>
+                <Text>Changer de mot de passe</Text>
+              </Button>
+            </a>
+          </Link>
+          <Link href="/OffreurDeCompetence/Conseil">
+            <a>
+              <Button>
+                <Text>Connexion</Text>
+              </Button>
+            </a>
+          </Link>
+        </WrapperButton>
+      </WrapperInscription>
       <Footer />
-    </>
+    </WrapperContent>
   );
 };
 
-export default Demandeur_competence;
+export default Offreur_de_competence;
