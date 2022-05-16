@@ -14,6 +14,31 @@ import {
 } from "./Institutionnel.style";
 
 const Institutionnel = () => {
+
+  let item = {firstName, lastName, password, email, };
+
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [password, setPasssword] = useState("");
+  const [email, setEmail] = useState("");
+
+  async function signIn() {
+    let item = await fetch(config.api_url+"/api/users/", {
+      method: 'GET',
+      body: JSON.stringify(item),
+      headers:{
+        'Content-Type' : 'application/json',
+        'accept' : 'application/json'
+      }
+    });
+    result = await result.json();
+    localStorage.setItem(JSON.stringify(result));
+    console.warn(result);
+  }
+
+  // verify user_exist !
+  // -> créate function (=> conditions)   => get_api_data.js faire la function dedans et l'importer
+
   return (
     <WrapperContent>
       <WrapperInscription>
@@ -39,7 +64,7 @@ const Institutionnel = () => {
               </a>
             </Link>
           </Button>
-          <Button>
+          <Button onClick={() => {signIn()}}>
             <Link href="/OffreurDeCompetence/Conseil">
               <a>
                 <Text>Connexion</Text>
