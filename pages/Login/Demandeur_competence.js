@@ -1,63 +1,99 @@
-import React, {useState} from "react";
+import React, {useState, useEffect, useRef, useContext} from "react";
+import AuthContext from "../../context/AuthProvider";
 import Link from "next/link";
 import Footer from "../Footer/Footer";
-import Image from "next/image";
-import axios from "axios";
-import config from "../../config.json";
+import Header1 from '../Header/Header1';
+import axios from "../api/axios";
+
+const LOGIN_URL = '/api/authenticate';
 
 // Import Images
-import Myrhmica from "../../public/image/Myrhmica-color-remove.png";
-import PortraitScopie from "../../public/image/PortraitScopie-remove.png";
-
 import WrapperContent, {
-  WrapperInscription,
   Title,
   Subtitle,
   WrapperInput,
   WrapperButton,
   Button,
   Text,
-  WrapperImage,
 } from "./Offreur_de_competence.style";
 
 const Demandeur_competence = () => {
 
-  let item = {firstName, lastName, password, email, };
+  const { setAuth } = useContext(AuthContext);
+  const userRef = useRef();
+  const errRef = useRef();
 
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [password, setPasssword] = useState("");
-  const [email, setEmail] = useState("");
+  const [user, setUser] = useState('');
+  const [pwd, setPwd] = useState('');
+  const [errMsg, setErrMsg] = useState('');
+  const [success, setSuccess] = useState('');
 
-  async function signIn() {
-    let item = await fetch(config.api_url+"/api/users/", {
-      method: 'GET',
-      body: JSON.stringify(item),
-      headers:{
-        'Content-Type' : 'application/json',
-        'accept' : 'application/json'
-      }
-    });
-    result = await result.json();
-    localStorage.setItem(JSON.stringify(result));
-    console.warn(result);
+  useEffect(() => {
+    userRef.current.focus();
+  }, [])
+
+  useEffect(() => {
+    setErrMsg('');
+  }, [user, pwd])
+
+  const handleSubmit = async (e) => {
+    try {
+      const response = await axios.post(LOGIN_URL,
+        JSON.stringify({user, pwd}),
+          {
+            headers: { 'Content-Type' : 'application/json'},
+            withCredentials: true
+          }
+        );
+        console.log(JSON.stringify(response?.data));
+        // console.log(JSON.stringify(response));
+        const accessToken = response?.data.accessToken;
+        const roles = response?.data.roles;
+        setAuth({ user, pwd, roles ,accessToken });
+        setUser('');
+        setPwd('');
+        setSuccess(true);
+      } catch(err) {
+        if(!err?.response) {
+          setErrMsg('No Server Response');
+        } else if(err.response?.status === 400) {
+          setErrMsg('Missing Username or Password');
+        } else if(err.response?.status === 401) {
+          setErrMsg('Unauthorized');
+        } else {
+          setErrMsg('Login Failed');
+        }
+    }
   }
-
-  // verify user_exist !
-  // -> créate function (=> conditions)   => get_api_data.js faire la function dedans et l'importer
 
   return (
     <>
       <Header1 />
       <WrapperContent>
-        <WrapperInscription>
+        <form onSubmit={handleSubmit}>
           <Title>Pseudo</Title>
           <WrapperInput>
-            <input placeholder="Pseudo" />
+            <input 
+              type="text"
+              id="username"
+              ref={userRef}
+              autoComplete="off"
+              onChange={(e) => setUser(e.target.value)}
+              value={user}
+              required
+            />
+            <p ref={errRef} className={errMsg ? 'errmsg' : 'offscreen'} aria-live="assertive">{errMsg}</p>
           </WrapperInput>
           <Title>Mot de passe</Title>
           <WrapperInput>
-            <input placeholder="Mot de passe" />
+            <input 
+              type="password"
+              id="password"
+              onChange={(e) => setPwd(e.target.value)}
+              value={pwd}
+              required
+            />
+            <p ref={errRef} className={errMsg ? 'errmsg' : 'offscreen'} aria-live="assertive">{errMsg}</p>
           </WrapperInput>
           <Subtitle>
             Pas encore de compte ?
@@ -74,7 +110,7 @@ const Demandeur_competence = () => {
                 </a>
               </Link>
             </Button>
-            <Button onClick={() => {signIn()}}>
+            <Button onClick={() => {handleSubmit()}}>
               <Link href="/OffreurDeCompetence/Conseil">
                 <a>
                   <Text>Connexion</Text>
@@ -82,11 +118,11 @@ const Demandeur_competence = () => {
               </Link>
             </Button>
           </WrapperButton>
-        </WrapperInscription>
+        </form>
       </WrapperContent>
       <Footer />
     </>
   );
 };
 
-export default Offreur_de_competence;
+export default Demandeur_competence;
