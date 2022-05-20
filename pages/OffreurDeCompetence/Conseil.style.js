@@ -18,9 +18,14 @@ export const ConseilsCard = styled.div`
   border: 1px solid #2a3985;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
-  width: 400px;
+  width: 300px;
   height: 400px;
   display: flex;
+`;
+
+export const WrapperImage = styled.div`
+  width: 200px;
+  height: 100px;
 `;
 
 export const Text = styled.h2`
@@ -44,7 +49,8 @@ export const TextTop = styled.h2`
 export const WrapperConseilsCard = styled.div`
   display: flex;
   justify-content: space-around;
-  padding-top: 80px;
+  align-items: center;
+  padding-top: 60px;
 `;
 
 export const ButtonLink = styled.div`
@@ -52,6 +58,7 @@ export const ButtonLink = styled.div`
   justify-content: flex-end;
   padding-right: 30px;
   padding-top: 30px;
+  padding-bottom: 10px;
 `;
 
 export const Button = styled.button`

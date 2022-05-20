@@ -1,9 +1,11 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Header1 from "../Header/Header1";
 import Footer from "../Footer/Footer";
 import Container, {
   ConseilsCard,
+  WrapperImage,
   Text,
   Button,
   TextTop,
@@ -11,6 +13,8 @@ import Container, {
   WrapperConseilsCard,
   ButtonLink,
 } from "./Conseil.style";
+
+import Flêche from "../../public/image/Fleche-droite.png";
 
 const Conseil = () => {
   return (
@@ -30,12 +34,18 @@ const Conseil = () => {
               comme les définitions ou le sommaire
             </Text>
           </ConseilsCard>
+          <WrapperImage>
+            <Image src={Flêche} alt={"PortraitScopie"} quality={100} />
+          </WrapperImage>
           <ConseilsCard>
             <Text>
               Munissez-vous de tous documents retraçant votre parcours
               professionnel (contrat de travail, fiche de poste, ...)
             </Text>
           </ConseilsCard>
+          <WrapperImage>
+            <Image src={Flêche} alt={"PortraitScopie"} quality={100} />
+          </WrapperImage>
           <ConseilsCard>
             <Text>
               Vous pouvez enrichir votre PortraiScopie à votre rythme. Il est
