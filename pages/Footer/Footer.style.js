@@ -3,8 +3,8 @@ import styled from "styled-components";
 const FooterWrapper = styled.div`
   background-color: #3b3361;
   color: white;
-  position: fixed;
-  bottom: 0;
+  position: relative;
+  bottom: 0px;
   left: 0;
   right: 0;
   display: flex;
