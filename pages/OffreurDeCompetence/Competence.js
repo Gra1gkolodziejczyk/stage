@@ -1,16 +1,24 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Header2 from "../Header/Header2";
 import Footer from "../Footer/Footer";
 import WrapperContent, {
   WrapperTitle,
-  Titre,
+  Title,
+  TextTitle,
+  TextTop,
   Text,
+  TextBottom,
   WrapperCompetence,
+  WrapperTop,
   WrapperInput,
-  ButtonLink,
+  ButtonLinkLeft,
+  ButtonLinkRight,
   WrapperButton,
 } from "./Competence.style";
+
+import Recherche from "../../public/image/rechercher.png";
 
 const Competence = () => {
   return (
@@ -18,14 +26,23 @@ const Competence = () => {
       <Header2 />
       <WrapperContent>
         <WrapperTitle>
-          <Titre>Mon PortraiScopie Mes Compétences mises en Avant!</Titre>
-          <Text>
+          <Title>Mon PortraiScopie Mes Compétences mises en Avant !</Title>
+          <TextTitle>
             PortraiScopie ouvre la voie à l'expression de la compétence et aux
             savoirs comportementaux rattachés
-          </Text>
+          </TextTitle>
         </WrapperTitle>
         <WrapperCompetence>
-          <Text>Ma compétence</Text>
+          <WrapperTop>
+            <TextTop>Ma compétence</TextTop>
+            <Image
+              src={Recherche}
+              alt={"Myrhmica"}
+              quality={100}
+              width={70}
+              height={40}
+            />
+          </WrapperTop>
           <Text>
             Citez ou choisissez dans la liste une compétence dans laquelle vous
             excellez
@@ -34,20 +51,20 @@ const Competence = () => {
             <input placeholder="Compétence" />
           </WrapperInput>
           <WrapperButton>
-            <ButtonLink>
+            <ButtonLinkLeft>
               <Link href="/OffreurDeCompetence/Competence">
                 <a>
-                  <Text>Enregistrer et Quitter</Text>
+                  <TextBottom>Enregistrer et Quitter</TextBottom>
                 </a>
               </Link>
-            </ButtonLink>
-            <ButtonLink>
+            </ButtonLinkLeft>
+            <ButtonLinkRight>
               <Link href="/OffreurDeCompetence/Metier">
                 <a>
-                  <Text>Valider</Text>
+                  <TextBottom>Valider</TextBottom>
                 </a>
               </Link>
-            </ButtonLink>
+            </ButtonLinkRight>
           </WrapperButton>
         </WrapperCompetence>
       </WrapperContent>

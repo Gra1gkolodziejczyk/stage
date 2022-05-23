@@ -5,6 +5,12 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
+export const WrapperTitle = styled.div`
+  display: flex;
+  justify-content: center;
+  text-align: center;
+`;
+
 export const Conseils = styled.div`
   display: flex;
   justify-content: center;
@@ -26,6 +32,7 @@ export const ConseilsCard = styled.div`
 export const WrapperImage = styled.div`
   width: 200px;
   height: 100px;
+  padding-bottom: 170px;
 `;
 
 export const Text = styled.h2`
