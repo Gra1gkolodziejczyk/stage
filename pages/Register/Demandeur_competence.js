@@ -42,9 +42,8 @@ const Demandeur_competence = () => {
     } else {
       console.log('Registration Failed');
     }
-    }
   }
-
+}
 
   return (
     <WrapperContent>

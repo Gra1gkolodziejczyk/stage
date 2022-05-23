@@ -16,6 +16,28 @@ import WrapperTitle, {
 } from "./Centre_interet.style";
 
 const Centre_interet = () => {
+
+  const items = [centre_interet];
+  const [centre_interet, setCentre_interet] = useState("");
+
+  const handleSubmit = async (e) =>  {
+    console.log("Le click fonctionne");
+    try {
+    const response = await axios.post(config.api_url+"/api/portraiscopie/", 
+      JSON.stringify({ centre_interet, items }),
+      {
+        headers : { 'Content-Type' : 'application/json' },
+        withCredentials: true,
+      }
+    );
+    console.log(JSON.stringify(response?.data));
+  } catch(err) {
+    if (!err?.response) {
+      console.log("Il y a une erreur");
+    }
+  }
+}
+
   return (
     <>
       <Header />
@@ -45,7 +67,11 @@ const Centre_interet = () => {
             <Text>
               Vos centres d'intérêt qui mettent en lumière cette compétence
             </Text>
-            <input placeholder="Précisez ici une centre d'intérêt pour cette compétence" />
+            <input 
+              placeholder="Précisez ici une centre d'intérêt pour cette compétence" 
+              value={centre_interet}
+              onChange={(e) => setCentre_interet(e.target.value)}
+              />
           </WrapperMenuDeroulant>
 
           {/* Image du +
@@ -62,7 +88,7 @@ const Centre_interet = () => {
               </a>
             </Link>
           </ButtonLink>
-          <ButtonLink>
+          <ButtonLink onClick={() => {handleSubmit()}}>
             <Link href="/OffreurDeCompetence/Resumes">
               <a>
                 <Text>Suivant</Text>

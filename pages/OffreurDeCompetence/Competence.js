@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Header2 from "../Header/Header2";
 import Footer from "../Footer/Footer";
+
 import WrapperContent, {
   WrapperTitle,
   Title,
@@ -21,6 +22,29 @@ import WrapperContent, {
 import Recherche from "../../public/image/rechercher.png";
 
 const Competence = () => {
+
+  const items = [competence];
+
+  const [competence, setCompetence] = useState("");
+
+  const handleSubmit = async (e) =>  {
+    console.log("Le click fonctionne");
+    try {
+    const response = await axios.post(config.api_url+"/api/portraiscopie/", 
+      JSON.stringify({ competence, items }),
+      {
+        headers : { 'Content-Type' : 'application/json' },
+        withCredentials: true,
+      }
+    );
+    console.log(JSON.stringify(response?.data));
+  } catch(err) {
+    if (!err?.response) {
+      console.log("Il y à une erreur...");
+    }
+  }
+}
+
   return (
     <>
       <Header2 />
@@ -48,10 +72,14 @@ const Competence = () => {
             excellez
           </Text>
           <WrapperInput>
-            <input placeholder="Compétence" />
+            <input 
+              placeholder="Compétence" 
+              value={competence}
+              onChange={(e) => setCompetence(e.target.value)}
+            />
           </WrapperInput>
           <WrapperButton>
-            <ButtonLinkLeft>
+            <ButtonLinkLeft onClick={() => {handleSubmit()}}>
               <Link href="/OffreurDeCompetence/Competence">
                 <a>
                   <TextBottom>Enregistrer et Quitter</TextBottom>

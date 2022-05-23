@@ -16,13 +16,15 @@ import WrapperTitle, {
 
 const Techniques = () => {
 
+  const items = [techniques];
+
   const [techniques, setTechniques] = useState("");
 
   const handleSubmit = async (e) =>  {
-    console.log('Le lien a été cliqué.');
+    console.log("Le click fonctionne");
     try {
     const response = await axios.post(config.api_url+"/api/portraiscopie/", 
-      JSON.stringify({  }),
+      JSON.stringify({ techniques, items }),
       {
         headers : { 'Content-Type' : 'application/json' },
         withCredentials: true,
@@ -31,7 +33,7 @@ const Techniques = () => {
     console.log(JSON.stringify(response?.data));
   } catch(err) {
     if (!err?.response) {
-      console.log("No server Response");
+      console.log("Il y a une erreur");
     }
   }
 }
@@ -58,6 +60,11 @@ const Techniques = () => {
                     height={}
                 /> */}
           <Divider></Divider>
+          <input 
+            placeholder="mettez votre techniques"
+            value={techniques}
+            onChange={(e) => setTechniques(e.target.value)}
+             />
 
           <WrapperMenuDeroulant>
             <Text>Techniques pour cette compétence</Text>
