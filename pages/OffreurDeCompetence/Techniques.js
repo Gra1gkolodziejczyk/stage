@@ -17,7 +17,6 @@ import WrapperTitle, {
 const Techniques = () => {
 
   const items = [techniques];
-
   const [techniques, setTechniques] = useState("");
 
   const handleSubmit = async (e) =>  {

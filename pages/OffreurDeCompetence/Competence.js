@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Header2 from "../Header/Header2";
@@ -22,16 +22,13 @@ import WrapperContent, {
 import Recherche from "../../public/image/rechercher.png";
 
 const Competence = () => {
-
-  const items = [competence];
-
   const [competence, setCompetence] = useState("");
 
   const handleSubmit = async (e) =>  {
     console.log("Le click fonctionne");
     try {
     const response = await axios.post(config.api_url+"/api/portraiscopie/", 
-      JSON.stringify({ competence, items }),
+      JSON.stringify({ competence }),
       {
         headers : { 'Content-Type' : 'application/json' },
         withCredentials: true,
