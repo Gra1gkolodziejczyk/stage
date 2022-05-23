@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const WrapperContent = styled.div`
   font-family: Sawarabi Gothic;
+  padding-bottom: 0px;
 `;
 
 export const WrapperInscription = styled.div`

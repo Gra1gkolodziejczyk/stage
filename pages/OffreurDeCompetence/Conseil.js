@@ -4,13 +4,13 @@ import Image from "next/image";
 import Header1 from "../Header/Header1";
 import Footer from "../Footer/Footer";
 import Container, {
-  ConseilsCard,
-  WrapperImage,
-  Text,
-  Button,
+  WrapperTitle,
   TextTop,
-  Conseils,
   WrapperConseilsCard,
+  ConseilsCard,
+  Text,
+  WrapperImage,
+  Button,
   ButtonLink,
 } from "./Conseil.style";
 
@@ -21,12 +21,12 @@ const Conseil = () => {
     <>
       <Header1 />
       <Container>
-        <Conseils>
+        <WrapperTitle>
           <TextTop>
             Pour une bonne prise en main de votre PortraiScopie, veuillez suivre
             attentivement les conseils ci-dessous
           </TextTop>
-        </Conseils>
+        </WrapperTitle>
         <WrapperConseilsCard>
           <ConseilsCard>
             <Text>
