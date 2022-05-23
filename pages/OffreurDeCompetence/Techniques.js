@@ -15,6 +15,27 @@ import WrapperTitle, {
 } from "./Techniques.style";
 
 const Techniques = () => {
+
+  const [techniques, setTechniques] = useState("");
+
+  const handleSubmit = async (e) =>  {
+    console.log('Le lien a été cliqué.');
+    try {
+    const response = await axios.post(config.api_url+"/api/portraiscopie/", 
+      JSON.stringify({  }),
+      {
+        headers : { 'Content-Type' : 'application/json' },
+        withCredentials: true,
+      }
+    );
+    console.log(JSON.stringify(response?.data));
+  } catch(err) {
+    if (!err?.response) {
+      console.log("No server Response");
+    }
+  }
+}
+
   return (
     <>
       <Header />
@@ -62,7 +83,7 @@ const Techniques = () => {
               </a>
             </Link>
           </ButtonLink>
-          <ButtonLink>
+          <ButtonLink onClick={() => {handleSubmit()}}>
             <Link href="/OffreurDeCompetence/Technologies">
               <a>
                 <Text>Suivant</Text>
