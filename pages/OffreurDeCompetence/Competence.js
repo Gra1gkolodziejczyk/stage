@@ -35,13 +35,7 @@ const Competence = () => {
         <WrapperCompetence>
           <WrapperTop>
             <TextTop>Ma compétence</TextTop>
-            <Image
-              src={Recherche}
-              alt={"Myrhmica"}
-              quality={100}
-              width={70}
-              height={40}
-            />
+            <Image src={Recherche} alt={"Myrhmica"} quality={100} width={70} />
           </WrapperTop>
           <Text>
             Citez ou choisissez dans la liste une compétence dans laquelle vous
