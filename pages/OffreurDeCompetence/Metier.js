@@ -9,6 +9,7 @@ import WrapperTitle, {
   TitleTop,
   TitleColor,
   Text,
+  TextAjout,
   Wrapper,
   WrapperAll,
   WrapperProgression,
@@ -17,13 +18,16 @@ import WrapperTitle, {
   WrapperContent,
   WrapperMenuDeroulant,
   WrapperInput,
+  WrapperDate,
   ButtonLink,
   WrapperCoche,
   WrapperDuCoche,
+  WrapperAjout,
 } from "./Metier.style";
 
 import Progression from "../../public/image/Progression-remove.png";
 import Recherche from "../../public/image/rechercher.png";
+import Plus from "../../public/image/plus.png";
 
 const Metier = () => {
   return (
@@ -55,9 +59,8 @@ const Metier = () => {
           <WrapperContent>
             <Title>Le metier exercé pour cette compétence</Title>
             <WrapperMenuDeroulant>
-              <WrapperInput>
-                <input placeholder="Métier 1" />
-              </WrapperInput>
+              <input placeholder="Métier 1" />
+
               {/* Image 
                     src={}
                     alt={}
@@ -65,62 +68,49 @@ const Metier = () => {
                     height={}
                 /> */}
             </WrapperMenuDeroulant>
-
             <Title>Date de début</Title>
-            <WrapperMenuDeroulant>
-              <WrapperInput>
-                <input placeholder="Mois" />
-              </WrapperInput>
+            <WrapperDate>
+              <input placeholder="Mois" />
+
               {/* Image 
                     src={}
                     alt={}
                     width={}
                     height={}
                 /> */}
-            </WrapperMenuDeroulant>
-
-            <WrapperMenuDeroulant>
-              <Text>Année</Text>
+              <input placeholder="Année" />
               {/* Image 
                     src={}
                     alt={}
                     width={}
                     height={}
                 /> */}
-            </WrapperMenuDeroulant>
-
+            </WrapperDate>
             <Title>Date de fin</Title>
-            <WrapperMenuDeroulant>
-              <Text>Mois</Text>
+            <WrapperDate>
+              <input placeholder="Mois" />
               {/* Image 
                     src={}
                     alt={}
                     width={}
                     height={}
                 /> */}
-            </WrapperMenuDeroulant>
-
-            <WrapperMenuDeroulant>
-              <Text>Année</Text>
+              <input placeholder="Année" />
               {/* Image 
                     src={}
                     alt={}
                     width={}
                     height={}
                 /> */}
-            </WrapperMenuDeroulant>
-
+            </WrapperDate>
             <WrapperDuCoche>
               <WrapperCoche></WrapperCoche>
               <Text>J'occupe actuellement ce poste</Text>
             </WrapperDuCoche>
-            {/* Image du +
-                    src={}
-                    alt={}
-                    width={}
-                    height={}
-                /> */}
-            <Text>Ajouté</Text>
+            <WrapperAjout>
+              <Image src={Plus} alt={"PortraiScopie"} quality={100} />
+              <TextAjout>Ajouter</TextAjout>
+            </WrapperAjout>
             <ButtonLink>
               <Link href="/OffreurDeCompetence/Activites">
                 <a>
