@@ -174,7 +174,7 @@ export const Text = styled.p`
 
 export const TextAjout = styled.h2`
   font-size: 15px;
-  margin-left: 20px;
+  margin-left: 15px;
 `;
 
 export const Wrapper = styled.div`
@@ -184,7 +184,7 @@ export const Wrapper = styled.div`
 export const WrapperAll = styled.div`
   background-color: white;
   width: 1700px;
-  height: 715px;
+  height: auto;
   border-radius: 30px;
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
 `;

@@ -41,7 +41,6 @@ import WrapperTitle, {
   WrapperButton,
 } from "./Metier.style";
 
-import Progression from "../../public/image/Progression-remove.png";
 import Idea from "../../public/image/idea.png";
 import Plus from "../../public/image/plus.png";
 
