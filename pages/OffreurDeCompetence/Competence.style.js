@@ -60,7 +60,7 @@ export const ButtonLinkLeft = styled.button`
   color: white;
   background: #c4c4c4;
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 30px;
+  border-radius: 40px;
   width: 250px;
   dislpay: flex;
   justify-content: center;
@@ -72,7 +72,7 @@ export const ButtonLinkRight = styled.button`
   color: white;
   background: #2a3985;
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 30px;
+  border-radius: 40px;
   width: 200px;
   dislpay: flex;
   justify-content: center;
