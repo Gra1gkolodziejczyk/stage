@@ -3,6 +3,7 @@ import styled from "styled-components";
 const WrapperContent = styled.div`
   display: flex;
   flex-direction: column;
+  height: auto;
 `;
 
 export const WrapperTitle = styled.div`
@@ -33,6 +34,7 @@ export const WrapperCocheAll = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  height: auto;
 `;
 
 export const WrapperCocheLeft = styled.div`

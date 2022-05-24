@@ -19,8 +19,8 @@ import Flêche from "../../public/image/Fleche-droite.png";
 const Conseil = () => {
   return (
     <>
-      <Header1 />
       <Container>
+        <Header1 />
         <WrapperTitle>
           <TextTop>
             Pour une bonne prise en main de votre PortraiScopie, veuillez suivre
@@ -60,8 +60,8 @@ const Conseil = () => {
             </a>
           </Link>
         </ButtonLink>
+        <Footer />
       </Container>
-      <Footer />
     </>
   );
 };
