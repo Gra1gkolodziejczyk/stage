@@ -31,3 +31,8 @@ a {
 button {
   border: none;
 }
+
+h2 {
+  font-family: "Lato";
+  font-style: normal;
+}

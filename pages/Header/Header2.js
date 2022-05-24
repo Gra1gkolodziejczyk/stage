@@ -24,7 +24,13 @@ const Header2 = () => {
         <WrapperImage>
           <Link href="/">
             <a>
-              <Image src={Myrhmica} alt={"Myrhmica"} quality={100} />
+              <Image
+                src={Myrhmica}
+                alt={"Myrhmica"}
+                quality={100}
+                width={115}
+                height={70}
+              />
             </a>
           </Link>
           <Link href="/portraitscopie">
@@ -33,19 +39,20 @@ const Header2 = () => {
                 src={PortraitScopie}
                 alt={"PortraitScopie"}
                 quality={100}
-                width={300}
-                height={75}
+                width={280}
+                height={70}
               />
             </a>
           </Link>
+
           <Link href="/profile">
             <a>
               <Image
                 src={Profile}
                 alt={"Profile"}
                 quality={100}
-                width={65}
-                height={50}
+                width={70}
+                height={70}
               />
               <Text>Profile</Text>
             </a>
