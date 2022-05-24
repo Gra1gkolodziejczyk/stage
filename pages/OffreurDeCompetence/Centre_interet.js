@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../Header/Header2";
@@ -16,7 +16,7 @@ import WrapperTitle, {
 } from "./Centre_interet.style";
 
 const Centre_interet = () => {
-  
+
   const [centre_interet, setCentre_interet] = useState("");
 
   const handleSubmit = async (e) =>  {

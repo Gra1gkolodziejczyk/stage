@@ -5,6 +5,141 @@ const WrapperTitle = styled.div`
   justify-content: center;
 `;
 
+export const WrapperProgression = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+`;
+
+export const DividerTop = styled.div`
+  background-color: #65cf90;
+  height: 3px;
+  width: 50px;
+  margin-left: 0px;
+  margin-right: 0px;
+`;
+
+export const Wrapper1 = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 80px;
+`;
+
+export const Wrapper2 = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+`;
+
+export const Wrapper3 = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+`;
+
+export const Wrapper4 = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+`;
+
+export const Wrapper5 = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+`;
+
+export const Wrapper6 = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+`;
+
+export const Wrapper7 = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+`;
+
+export const Wrapper8 = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+`;
+
+export const Wrapper9 = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+`;
+
+export const Wrapper10 = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+`;
+
+export const Wrapper11 = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 130px;
+  padding-top: 25px;
+  padding-right: 50px;
+`;
+
+export const TextTop = styled.h2`
+  background-color: #65cf90;
+  color: white;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+`;
+
+export const TextBottom = styled.h2`
+  color: #65cf90;
+  margin: 0px;
+  font-size: 20px;
+`;
+
 export const WrapperTop = styled.div`
   background: #f2bf3d;
   border-radius: 30px;
@@ -27,12 +162,19 @@ export const Title = styled.h2`
   font-size: 20px;
 `;
 
+export const TitleImp = styled.h2`
+  font-size: 20px;
+  color: #2a3985;
+  font-weight: 700;
+`;
+
 export const Text = styled.p`
   font-size: 20px;
 `;
 
 export const TextAjout = styled.h2`
   font-size: 15px;
+  margin-left: 15px;
 `;
 
 export const Wrapper = styled.div`
@@ -42,24 +184,25 @@ export const Wrapper = styled.div`
 export const WrapperAll = styled.div`
   background-color: white;
   width: 1700px;
-  height: 700px;
+  height: auto;
   border-radius: 30px;
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
-`;
-
-export const WrapperProgression = styled.div`
-  padding-left: 250px;
 `;
 
 export const WrapperImp = styled.div`
   display: flex;
   flex-wrap: wrap;
+  margin-left: 70px;
+  height: 40px;
 `;
+
+export const WrapperImage = styled.div``;
 
 export const Divider = styled.div`
   background-color: #2a3985;
-  width: 1000px;
-  height: 2px;
+  width: 1400px;
+  height: 1px;
+  margin-left: 70px;
 `;
 
 export const WrapperContent = styled.div`
@@ -76,13 +219,11 @@ export const WrapperMenuDeroulant = styled.div`
     border: none;
     border-radius: 30px;
     width: 700px;
-    height: 70px;
+    height: 50px;
     margin-left: 30px;
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
   }
 `;
-
-//export const WrapperInput = styled.div``;
 
 export const WrapperDate = styled.div`
   display: flex;
@@ -94,10 +235,15 @@ export const WrapperDate = styled.div`
     border: none;
     border-radius: 30px;
     width: 200px;
-    height: 70px;
+    height: 50px;
     margin-left: 30px;
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
   }
+`;
+
+export const WrapperButton = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
 `;
 
 export const ButtonLink = styled.button`
@@ -106,23 +252,31 @@ export const ButtonLink = styled.button`
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
   width: 200px;
-  dislpay: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   margin: 25px;
+  line-height: 24px;
 `;
 export const WrapperCoche = styled.div`
-  box-sizing: border-box;
+  border: 2px solid #000000;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
 `;
 
-export const WrapperDuCoche = styled.div``;
-
-export const WrapperAjout = styled.div`
+export const WrapperDuCoche = styled.div`
+  margin-left: 25px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  width: 150px;
+`;
+
+export const WrapperAjout = styled.div`
+  margin-left: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 `;
 
 export default WrapperTitle;

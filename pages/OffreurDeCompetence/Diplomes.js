@@ -56,7 +56,7 @@ const Diplomes = () => {
                 /> */}
           <Text>Ajouté</Text>
           <ButtonLink>
-            <Link href="/OffreurDeCompetence/Technologie">
+            <Link href="/OffreurDeCompetence/Technologies">
               <a>
                 <Text>Précédent</Text>
               </a>

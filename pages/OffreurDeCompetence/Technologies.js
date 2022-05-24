@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../Header/Header2";
@@ -15,6 +15,27 @@ import WrapperTitle, {
 } from "./Technologies.style";
 
 const Technologies = () => {
+
+  const [technologie, setTechnologie] = useState("");
+
+  const handleSubmit = async (e) =>  {
+    console.log("Le click fonctionne");
+    try {
+    const response = await axios.post(config.api_url+"/api/portraiscopie/", 
+      JSON.stringify({ technologie }),
+      {
+        headers : { 'Content-Type' : 'application/json' },
+        withCredentials: true,
+      }
+    );
+    console.log(JSON.stringify(response?.data));
+  } catch(err) {
+    if (!err?.response) {
+      console.log("Il y a une erreur");
+    }
+  }
+}
+
   return (
     <>
       <Header />
@@ -48,21 +69,20 @@ const Technologies = () => {
                 /> */}
           </WrapperMenuDeroulant>
 
-          {/* Image du +
-                    src={}
-                    alt={}
-                    width={}
-                    height={}
-                /> */}
+          <input 
+            placeholder="technologies"
+            value={technologie}
+            onChange={(e) => setTechnologie(e.target.value)} 
+            />
           <Text>Ajouté</Text>
           <ButtonLink>
             <Link href="/OffreurDeCompetence/Techniques">
               <a>
                 <Text>Précédent</Text>
-              </a>
+              </a> 
             </Link>
           </ButtonLink>
-          <ButtonLink>
+          <ButtonLink onClick={() => {handleSubmit()}}>
             <Link href="/OffreurDeCompetence/Diplomes">
               <a>
                 <Text>Suivant</Text>

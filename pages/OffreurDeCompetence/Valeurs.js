@@ -16,6 +16,27 @@ import WrapperTitle, {
 } from "./Valeurs.style";
 
 const Valeurs = () => {
+
+  const [valeurs, setValeurs] = useState("");
+
+  const handleSubmit = async (e) =>  {
+    console.log("Le click fonctionne");
+    try {
+    const response = await axios.post(config.api_url+"/api/portraiscopie/", 
+      JSON.stringify({ valeurs }),
+      {
+        headers : { 'Content-Type' : 'application/json' },
+        withCredentials: true,
+      }
+    );
+    console.log(JSON.stringify(response?.data));
+  } catch(err) {
+    if (!err?.response) {
+      console.log("Il y a une erreur");
+    }
+  }
+}
+
   return (
     <>
       <Header />
@@ -43,7 +64,11 @@ const Valeurs = () => {
 
           <WrapperMenuDeroulant>
             <Text>Vos valeurs pour cette compétence</Text>
-            <input placeholder="Donnez ici une valeur relative à cette compétence" />
+            <input 
+              placeholder="Donnez ici une valeur relative à cette compétence"
+              value={valeurs}
+              onChange={(e) => setValeurs(e.target.value)}
+               />
           </WrapperMenuDeroulant>
 
           {/* Image du +
