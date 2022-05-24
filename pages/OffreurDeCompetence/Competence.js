@@ -22,12 +22,13 @@ import WrapperContent, {
 import Recherche from "../../public/image/rechercher.png";
 
 const Competence = () => {
+  
   const [competence, setCompetence] = useState("");
 
   const handleSubmit = async (e) =>  {
     console.log("Le click fonctionne");
     try {
-    const response = await axios.post(config.api_url+"/api/portraiscopie/", 
+    const response = await axios.post(config.api_url+"/api/technicals/", 
       JSON.stringify({ competence }),
       {
         headers : { 'Content-Type' : 'application/json' },
@@ -48,10 +49,7 @@ const Competence = () => {
       <WrapperContent>
         <WrapperTitle>
           <Title>Mon PortraiScopie Mes Compétences mises en Avant !</Title>
-          <TextTitle>
-            PortraiScopie ouvre la voie à l'expression de la compétence et aux
-            savoirs comportementaux rattachés
-          </TextTitle>
+          <TextTitle>PortraiScopie ouvre la voie à l'expression de la compétence et aux savoirs comportementaux rattachés</TextTitle>
         </WrapperTitle>
         <WrapperCompetence>
           <WrapperTop>

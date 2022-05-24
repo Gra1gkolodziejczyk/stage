@@ -16,15 +16,14 @@ import WrapperTitle, {
 } from "./Centre_interet.style";
 
 const Centre_interet = () => {
-
-  const items = [centre_interet];
+  
   const [centre_interet, setCentre_interet] = useState("");
 
   const handleSubmit = async (e) =>  {
     console.log("Le click fonctionne");
     try {
     const response = await axios.post(config.api_url+"/api/portraiscopie/", 
-      JSON.stringify({ centre_interet, items }),
+      JSON.stringify({ centre_interet }),
       {
         headers : { 'Content-Type' : 'application/json' },
         withCredentials: true,

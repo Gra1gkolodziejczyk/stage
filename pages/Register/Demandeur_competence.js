@@ -30,7 +30,7 @@ const Demandeur_competence = () => {
       JSON.stringify({ entityName, firstName, lastName, password, email, pseudo }),
       {
         headers : { 'Content-Type' : 'application/json' },
-        withCredentials: true
+        withCredentials: true,
       }
     );
     console.log(JSON.stringify(response?.data));
