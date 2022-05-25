@@ -49,6 +49,7 @@ export const WrapperInput = styled.div`
 `;
 
 export const WrapperCoche = styled.div`
+  margin-right: 150px;
   width: 430px;
   display: flex;
   flex-direction: row;

@@ -135,6 +135,13 @@ const Demandeur_competence = () => {
             <input placeholder="Confirmer mot de passe" />
           </WrapperInput> 
           */}
+
+        <Subtitle>
+          Vous avez déjà un compte ?
+          <Link href="/Login/Demandeur_competence">
+            <a>Connectez-vous</a>
+          </Link>
+        </Subtitle>
         <WrapperCoche>
           <CheckBox></CheckBox>
           <Text>
@@ -144,13 +151,6 @@ const Demandeur_competence = () => {
             </Link>
           </Text>
         </WrapperCoche>
-
-        <Subtitle>
-          Vous avez déjà un compte ?
-          <Link href="/Login/Demandeur_competence">
-            <a>Connectez-vous</a>
-          </Link>
-        </Subtitle>
 
         <WrapperButton>
           <Button

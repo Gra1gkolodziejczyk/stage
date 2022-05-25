@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const WrapperContent = styled.div`
   font-family: Sawarabi Gothic;
-  height: 100%;
+  padding-bottom: 0px;
 `;
 
 export const WrapperInscription = styled.div`
@@ -34,6 +34,7 @@ export const WrapperInput = styled.div`
 `;
 export const WrapperButton = styled.div`
   padding-left: 160px;
+  font-size: 20px;
 `;
 
 export const Button = styled.button`
@@ -45,6 +46,7 @@ export const Button = styled.button`
 
   &:text {
     color: white;
+    font-size: 20px;
   }
 `;
 export const Text = styled.p``;
@@ -53,6 +55,13 @@ export const WrapperImage = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 40px;
+`;
+
+export const Footer1 = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 `;
 
 export default WrapperContent;
