@@ -9,13 +9,13 @@ const LOGIN_URL = "/api/authenticate";
 
 // Import Images
 import WrapperContent, {
+  WrapperInscription,
   Title,
   Subtitle,
   WrapperInput,
   WrapperButton,
   Button,
   Text,
-  WrapperImage,
   Footer1,
 } from "./Demandeur_competence.style";
 
@@ -41,56 +41,60 @@ const Demandeur_competence = () => {
     <>
       <Header1 />
       <WrapperContent>
-        <form>
-          <Title>Email</Title>
-          <WrapperInput>
-            <input
-              type="email"
-              autoComplete="off"
-              onChange={(e) => setEmail(e.target.value)}
-              value={email}
-              required
-            />
-          </WrapperInput>
-          <Title>Mot de passe</Title>
-          <WrapperInput>
-            <input
-              type="password"
-              onChange={(e) => setPwd(e.target.value)}
-              value={pwd}
-              required
-            />
-          </WrapperInput>
-          <Subtitle>
-            Pas encore de compte ?
-            <Link href="/Register/Demandeur_competence">
-              <a>Inscrivez-vous</a>
-            </Link>
-          </Subtitle>
+        <WrapperInscription>
+          <form>
+            <Title>Email</Title>
+            <WrapperInput>
+              <input
+                type="email"
+                autoComplete="off"
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
+                required
+              />
+            </WrapperInput>
+            <Title>Mot de passe</Title>
+            <WrapperInput>
+              <input
+                type="password"
+                onChange={(e) => setPwd(e.target.value)}
+                value={pwd}
+                required
+              />
+            </WrapperInput>
+            <Subtitle>
+              Pas encore de compte ?
+              <Link href="/Register/Demandeur_competence">
+                <a>Inscrivez-vous</a>
+              </Link>
+            </Subtitle>
 
-          <WrapperButton>
-            <Button>
-              <Link href="/">
-                <a>
-                  <Text>Changer de mot de passe</Text>
-                </a>
-              </Link>
-            </Button>
-            <Button
-              onClick={() => {
-                handleSubmit();
-              }}
-            >
-              <Link href="/OffreurDeCompetence/Conseil">
-                <a>
-                  <Text>Connexion</Text>
-                </a>
-              </Link>
-            </Button>
-          </WrapperButton>
-        </form>
+            <WrapperButton>
+              <Button>
+                <Link href="/">
+                  <a>
+                    <Text>Changer de mot de passe</Text>
+                  </a>
+                </Link>
+              </Button>
+              <Button
+                onClick={() => {
+                  handleSubmit();
+                }}
+              >
+                <Link href="/OffreurDeCompetence/Conseil">
+                  <a>
+                    <Text>Connexion</Text>
+                  </a>
+                </Link>
+              </Button>
+            </WrapperButton>
+          </form>
+        </WrapperInscription>
       </WrapperContent>
-      <Footer />
+      <Footer1>
+        <Footer />
+      </Footer1>
     </>
   );
 };

@@ -1,10 +1,10 @@
 // import des packages nécessaire au bon fonctionnement
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Footer from "../Footer/Footer";
-import Image from "next/image";
 import axios from "axios";
 import config from "../../config.json";
+import Header1 from "../Header/Header1";
 
 import WrapperContent, {
   WrapperInscription,
@@ -14,7 +14,6 @@ import WrapperContent, {
   WrapperButton,
   Button,
   Text,
-  WrapperImage,
   Footer1,
 } from "./Offreur_de_competence.style";
 
@@ -43,30 +42,7 @@ const Offreur_de_competence = () => {
 
   return (
     <WrapperContent>
-      <WrapperImage>
-        <Link href="/">
-          <a>
-            <Image
-              src={Myrhmica}
-              alt={"Myrhmica"}
-              width={200}
-              height={125}
-              quality={100}
-            />
-          </a>
-        </Link>
-        <Link href="/https:/myrhmica.fr.">
-          <a>
-            <Image
-              src={PortraitScopie}
-              alt={"PortraitScopie"}
-              quality={100}
-              width={400}
-              height={100}
-            />
-          </a>
-        </Link>
-      </WrapperImage>
+      <Header1 />
       <WrapperInscription>
         <Title>Email</Title>
         <WrapperInput>

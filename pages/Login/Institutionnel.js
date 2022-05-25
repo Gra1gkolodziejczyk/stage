@@ -3,6 +3,7 @@ import Footer from "../Footer/Footer";
 import Link from "next/link";
 import Image from "next/image";
 import axios from "axios";
+import Header1 from "../Header/Header1";
 
 import WrapperContent, {
   WrapperInscription,
@@ -15,7 +16,6 @@ import WrapperContent, {
   WrapperImage,
   Footer1,
 } from "./Institutionnel.style";
-import axios from "axios";
 
 // Import Images
 import Myrhmica from "../../public/image/Myrhmica-color-remove.png";
@@ -42,30 +42,7 @@ const Institutionnel = () => {
 
   return (
     <WrapperContent>
-      <WrapperImage>
-        <Link href="/">
-          <a>
-            <Image
-              src={Myrhmica}
-              alt={"Myrhmica"}
-              width={200}
-              height={125}
-              quality={100}
-            />
-          </a>
-        </Link>
-        <Link href="/https:/myrhmica.fr.">
-          <a>
-            <Image
-              src={PortraitScopie}
-              alt={"PortraitScopie"}
-              quality={100}
-              width={400}
-              height={100}
-            />
-          </a>
-        </Link>
-      </WrapperImage>
+      <Header1 />
       <WrapperInscription>
         <Title>Email</Title>
         <WrapperInput>

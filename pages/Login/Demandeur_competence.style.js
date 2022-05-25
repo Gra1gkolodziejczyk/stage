@@ -49,13 +49,8 @@ export const Button = styled.button`
     font-size: 20px;
   }
 `;
-export const Text = styled.p``;
 
-export const WrapperImage = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding: 40px;
-`;
+export const Text = styled.p``;
 
 export const Footer1 = styled.div`
   position: absolute;

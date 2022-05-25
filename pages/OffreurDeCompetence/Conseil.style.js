@@ -67,7 +67,6 @@ export const ButtonLink = styled.div`
   justify-content: flex-end;
   padding-right: 30px;
   padding-top: 30px;
-  padding-bottom: 10px;
 `;
 
 export const Button = styled.button`
@@ -78,6 +77,13 @@ export const Button = styled.button`
   width: 350px;
   border-radius: 20px;
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+`;
+
+export const Footer1 = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 `;
 
 export default Container;
