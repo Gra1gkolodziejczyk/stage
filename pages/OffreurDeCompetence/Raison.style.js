@@ -1,9 +1,9 @@
 import styled from "styled-components";
+import Footer from "../Footer/Footer";
 
 const WrapperContent = styled.div`
   display: flex;
   flex-direction: column;
-  height: auto;
 `;
 
 export const WrapperTitle = styled.div`
@@ -77,5 +77,7 @@ export const TextBottom = styled.h2`
   justify-content: center;
   align-items: center;
 `;
+
+export const Footer1 = styled.div``;
 
 export default WrapperContent;

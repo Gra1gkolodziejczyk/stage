@@ -4,9 +4,7 @@ const FooterWrapper = styled.div`
   background-color: #3b3361;
   color: white;
   position: sticky;
-  bottom: 0;
-  left: 0;
-  right: 0;
+
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -28,15 +26,6 @@ export const ContentWrapper = styled.div`
   background-color: #3b3361;
   color: white;
   display: flex;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
 `;
 
 export const Text = styled.h2`

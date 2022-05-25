@@ -19,9 +19,10 @@ import WrapperContent, {
   Button,
   Text,
   WrapperImage,
-} from "./Offreur_de_competence.style";
+  Footer1,
+} from "./Demandeur_competence.style";
 
-const Offreur_de_competence = () => {
+const Demandeur_competence = () => {
   return (
     <WrapperContent>
       <WrapperImage>
@@ -80,9 +81,11 @@ const Offreur_de_competence = () => {
           </Link>
         </WrapperButton>
       </WrapperInscription>
-      <Footer />
+      <Footer1>
+        <Footer />
+      </Footer1>
     </WrapperContent>
   );
 };
 
-export default Offreur_de_competence;
+export default Demandeur_competence;

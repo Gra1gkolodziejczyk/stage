@@ -5,6 +5,7 @@ import Header2 from "../Header/Header2";
 import Footer from "../Footer/Footer";
 import WrapperContent, {
   WrapperTitle,
+  WrapperImage,
   Title,
   TextTitle,
   TextTop,
@@ -16,9 +17,10 @@ import WrapperContent, {
   ButtonLinkLeft,
   ButtonLinkRight,
   WrapperButton,
+  Footer1,
 } from "./Competence.style";
 
-import Recherche from "../../public/image/rechercher.png";
+import Idea from "../../public/image/Idea.png";
 
 const Competence = () => {
   return (
@@ -35,7 +37,9 @@ const Competence = () => {
         <WrapperCompetence>
           <WrapperTop>
             <TextTop>Ma compétence</TextTop>
-            <Image src={Recherche} alt={"Myrhmica"} quality={100} width={70} />
+            <WrapperImage>
+              <Image src={Idea} alt={"Idée"} quality={100} />
+            </WrapperImage>
           </WrapperTop>
           <Text>
             Citez ou choisissez dans la liste une compétence dans laquelle vous
@@ -62,7 +66,9 @@ const Competence = () => {
           </WrapperButton>
         </WrapperCompetence>
       </WrapperContent>
-      <Footer />
+      <Footer1>
+        <Footer />
+      </Footer1>
     </>
   );
 };

@@ -57,4 +57,11 @@ export const WrapperImage = styled.div`
   padding: 40px;
 `;
 
+export const Footer1 = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+`;
+
 export default WrapperContent;

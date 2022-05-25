@@ -10,6 +10,8 @@ export const WrapperTitle = styled.div`
   flex-direction: column;
 `;
 
+export const WrapperImage = styled.div``;
+
 export const Title = styled.h2`
   color: white;
   background-color: #f2bf3d;
@@ -85,5 +87,12 @@ export const WrapperButton = styled.div`
 `;
 
 export const TextBottom = styled.h2``;
+
+export const Footer1 = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+`;
 
 export default WrapperContent;
