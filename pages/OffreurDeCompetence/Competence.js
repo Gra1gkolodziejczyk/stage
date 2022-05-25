@@ -30,7 +30,7 @@ const Competence = () => {
       const response = await axios.post("https://portraiscopie-dev.herokuapp.com/api/portraiscopies/",
         {
           "skills" : competence,
-        });  
+        });
         console.log(response);
       } catch(err) {
         console.log('il y a une erreur');
@@ -62,14 +62,14 @@ const Competence = () => {
             />
           </WrapperInput>
           <WrapperButton>
-            <ButtonLinkLeft onClick={() => {handleSubmit()}}>
+            <ButtonLinkLeft>
               <Link href="/OffreurDeCompetence/Competence">
                 <a>
                   <TextBottom>Enregistrer et Quitter</TextBottom>
                 </a>
               </Link>
             </ButtonLinkLeft>
-            <ButtonLinkRight>
+            <ButtonLinkRight onClick={() => {handleSubmit()}}>
               <Link href="/OffreurDeCompetence/Metier">
                 <a>
                   <TextBottom>Valider</TextBottom>

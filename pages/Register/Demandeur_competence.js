@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Link from 'next/link';
 import Footer from '../Footer/Footer';
-import config from '../../config.json';
 import axios from 'axios';
 
 import WrapperContent, {

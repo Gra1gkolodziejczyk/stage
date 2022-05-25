@@ -13,7 +13,6 @@ import {
   Button,
   Text,
 } from "./Institutionnel.style";
-import axios from "axios";
 
 const Institutionnel = () => {
 
@@ -36,7 +35,7 @@ const Institutionnel = () => {
   return (
     <WrapperContent>
       <WrapperInscription>
-        <Title>Mail</Title>
+        <Title>Email</Title>
         <WrapperInput>
           <input 
             placeholder="Email"
@@ -52,8 +51,7 @@ const Institutionnel = () => {
             onChange={(e) => setPwd(e.target.value)}
              />
         </WrapperInput>
-        <Subtitle>
-          Pas encore de compte ?
+        <Subtitle>Pas encore de compte ?
           <Link href="/Register/Institutionnel">
             <a>Inscrivez-vous</a>
           </Link>
