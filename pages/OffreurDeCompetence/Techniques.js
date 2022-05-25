@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../Header/Header2";
@@ -22,10 +22,8 @@ import WrapperTitle, {
   WrapperTop,
   TitleTop,
   TitleColor,
-  Title,
   TitleImp,
   Text,
-  TextAjout,
   Wrapper,
   WrapperAll,
   WrapperImp,
@@ -33,16 +31,32 @@ import WrapperTitle, {
   Divider,
   WrapperContent,
   WrapperMenuDeroulant,
-  WrapperAjout,
   ButtonLink,
-  ButtonLinkPrec,
-  WrapperButton,
 } from "./Techniques.style";
 
 import Idea from "../../public/image/idea.png";
-import Plus from "../../public/image/plus.png";
 
 const Techniques = () => {
+  const [techniques, setTechniques] = useState("");
+
+  const handleSubmit = async (e) =>  {
+    console.log("Le click fonctionne");
+    try {
+    const response = await axios.post(config.api_url+"/api/portraiscopie/", 
+      JSON.stringify({ techniques }),
+      {
+        headers : { 'Content-Type' : 'application/json' },
+        withCredentials: true,
+      }
+    );
+    console.log(JSON.stringify(response?.data));
+  } catch(err) {
+    if (!err?.response) {
+      console.log("Il y a une erreur");
+    }
+  }
+}
+
   return (
     <>
       <Header />
@@ -54,6 +68,7 @@ const Techniques = () => {
       </WrapperTitle>
 
       <Wrapper>
+       <WrapperContent>
         <WrapperAll>
           <WrapperProgression>
             <Wrapper1>
@@ -129,10 +144,12 @@ const Techniques = () => {
             </WrapperImage>
           </WrapperImp>
           <Divider></Divider>
-          <WrapperContent>
-            <Title>Techniques pour cette compétence</Title>
-            <WrapperMenuDeroulant>
-              <input placeholder="Techniques afficher a l'aide de l'API" />
+          <WrapperMenuDeroulant>
+          <input 
+            placeholder="mettez votre techniques"
+            value={techniques}
+            onChange={(e) => setTechniques(e.target.value)}
+             />
 
               {/* Image 
                     src={}
@@ -142,28 +159,29 @@ const Techniques = () => {
                 /> */}
             </WrapperMenuDeroulant>
 
-            <WrapperAjout>
-              <Image src={Plus} alt={"PortraiScopie"} quality={100} />
-              <TextAjout>Ajouter</TextAjout>
-            </WrapperAjout>
-            <WrapperButton>
-              <ButtonLinkPrec>
-                <Link href="/OffreurDeCompetence/Taches">
-                  <a>
-                    <Text>Précédent</Text>
-                  </a>
-                </Link>
-              </ButtonLinkPrec>
-              <ButtonLink>
-                <Link href="/OffreurDeCompetence/Technologies">
-                  <a>
-                    <Text>Suivant</Text>
-                  </a>
-                </Link>
-              </ButtonLink>
-            </WrapperButton>
-          </WrapperContent>
-        </WrapperAll>
+          {/* Image du +
+                    src={}
+                    alt={}
+                    width={}
+                    height={}
+                /> */}
+          <Text>Ajouté</Text>
+          <ButtonLink>
+            <Link href="/OffreurDeCompetence/Taches">
+              <a>
+                <Text>Précédent</Text>
+              </a>
+            </Link>
+          </ButtonLink>
+          <ButtonLink onClick={() => {handleSubmit()}}>
+            <Link href="/OffreurDeCompetence/Technologies">
+              <a>
+                <Text>Suivant</Text>
+              </a>
+            </Link>
+          </ButtonLink>
+          </WrapperAll>
+        </WrapperContent>
       </Wrapper>
     </>
   );

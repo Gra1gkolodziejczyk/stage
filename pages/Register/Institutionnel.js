@@ -25,28 +25,41 @@ import PortraitScopie from "../../public/image/PortraitScopie-remove.png";
 
 const Institutionnel = () => {
   const [entityName, setEntityName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
   const [pseudo, setPseudo] = useState("");
-  const [password, setPassword] = useState("");
 
-  async function signUp() {
-    let item = { entityName, firstName, lastName, email, pseudo, password };
-    console.warn(item);
-
-    let result = await fetch(config.api_url + "/api/users/", {
-      method: "POST",
-      body: JSON.stringify(item),
-      headers: {
-        "Content-Type": "application/json",
-        accept: "application/json",
-      },
-    });
-    result = await result.json();
-    localStorage.setItem(JSON.stringify(result));
-    console.warn(result);
-  }
+  const handleSubmit = async (e) => {
+    console.log("Le lien a été cliqué.");
+    try {
+      const response = await axios.post(
+        config.api_url + "/api/users/",
+        JSON.stringify({
+          entityName,
+          firstName,
+          lastName,
+          password,
+          email,
+          pseudo,
+        }),
+        {
+          headers: { "Content-Type": "application/json" },
+          withCredentials: true,
+        }
+      );
+      console.log(JSON.stringify(response?.data));
+    } catch (err) {
+      if (!err?.response) {
+        console.log("No server Response");
+      } else if (err.response?.status === 405) {
+        console.log("Invalid url");
+      } else {
+        console.log("Registration Failed");
+      }
+    }
+  };
 
   return (
     <WrapperContent>

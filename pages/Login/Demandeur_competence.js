@@ -1,17 +1,14 @@
-// import des packages nécessaire au bon fonctionnement
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Footer from "../Footer/Footer";
-import Image from "next/image";
+import Header1 from "../Header/Header1";
 import axios from "axios";
 import config from "../../config.json";
 
-// Import Images
-import Myrhmica from "../../public/image/Myrhmica-color-remove.png";
-import PortraitScopie from "../../public/image/PortraitScopie-remove.png";
+const LOGIN_URL = "/api/authenticate";
 
+// Import Images
 import WrapperContent, {
-  WrapperInscription,
   Title,
   Subtitle,
   WrapperInput,
@@ -23,68 +20,78 @@ import WrapperContent, {
 } from "./Demandeur_competence.style";
 
 const Demandeur_competence = () => {
+  const [email, setEmail] = useState("");
+  const [pwd, setPwd] = useState("");
+
+  const handleSubmit = async (e) => {
+    try {
+      const response = await axios.post(
+        "https://portraiscopie-dev.herokuapp.com/api/authenticate",
+        {
+          email: email,
+          password: pwd,
+        }
+      );
+      console.log(response);
+    } catch (err) {
+      console.log("il y a une erreur");
+    }
+  };
   return (
-    <WrapperContent>
-      <WrapperImage>
-        <Link href="/">
-          <a>
-            <Image
-              src={Myrhmica}
-              alt={"Myrhmica"}
-              width={200}
-              height={125}
-              quality={100}
+    <>
+      <Header1 />
+      <WrapperContent>
+        <form>
+          <Title>Email</Title>
+          <WrapperInput>
+            <input
+              type="email"
+              autoComplete="off"
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
+              required
             />
-          </a>
-        </Link>
-        <Link href="/https:/myrhmica.fr.">
-          <a>
-            <Image
-              src={PortraitScopie}
-              alt={"PortraitScopie"}
-              quality={100}
-              width={400}
-              height={100}
+          </WrapperInput>
+          <Title>Mot de passe</Title>
+          <WrapperInput>
+            <input
+              type="password"
+              onChange={(e) => setPwd(e.target.value)}
+              value={pwd}
+              required
             />
-          </a>
-        </Link>
-      </WrapperImage>
-      <WrapperInscription>
-        <Title>Email</Title>
-        <WrapperInput>
-          <input placeholder="Email" />
-        </WrapperInput>
-        <Title>Mot de passe</Title>
-        <WrapperInput>
-          <input placeholder="Mot de passe" />
-        </WrapperInput>
-        <Subtitle>
-          Pas encore de compte ?
-          <Link href="/Register/Offreur_de_competence">
-            <a>Inscrivez-vous</a>
-          </Link>
-        </Subtitle>
-        <WrapperButton>
-          <Link href="/">
-            <a>
-              <Button>
-                <Text>Changer de mot de passe</Text>
-              </Button>
-            </a>
-          </Link>
-          <Link href="/OffreurDeCompetence/Conseil">
-            <a>
-              <Button>
-                <Text>Connexion</Text>
-              </Button>
-            </a>
-          </Link>
-        </WrapperButton>
-      </WrapperInscription>
-      <Footer1>
-        <Footer />
-      </Footer1>
-    </WrapperContent>
+          </WrapperInput>
+          <Subtitle>
+            Pas encore de compte ?
+            <Link href="/Register/Demandeur_competence">
+              <a>Inscrivez-vous</a>
+            </Link>
+          </Subtitle>
+
+          <WrapperButton>
+            <Button>
+              <Link href="/">
+                <a>
+                  <Text>Changer de mot de passe</Text>
+                </a>
+              </Link>
+            </Button>
+            <Button
+              onClick={() => {
+                handleSubmit();
+              }}
+            >
+              <Link href="/OffreurDeCompetence/Conseil">
+                <a>
+                  <Text>Connexion</Text>
+                </a>
+              </Link>
+            </Button>
+          </WrapperButton>
+        </form>
+      </WrapperContent>
+      <Footer />
+    </>
   );
 };
 

@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Footer from "../Footer/Footer";
 import Link from "next/link";
 import Image from "next/image";
+import axios from "axios";
 
 import WrapperContent, {
   WrapperInscription,
@@ -14,12 +15,31 @@ import WrapperContent, {
   WrapperImage,
   Footer1,
 } from "./Institutionnel.style";
+import axios from "axios";
 
 // Import Images
 import Myrhmica from "../../public/image/Myrhmica-color-remove.png";
 import PortraitScopie from "../../public/image/PortraitScopie-remove.png";
 
 const Institutionnel = () => {
+  const [email, setEmail] = useState("");
+  const [pwd, setPwd] = useState("");
+
+  const handleSubmit = async (e) => {
+    try {
+      const response = await axios.post(
+        "https://portraiscopie-dev.herokuapp.com/api/authenticate",
+        {
+          email: email,
+          password: pwd,
+        }
+      );
+      console.log(response);
+    } catch (err) {
+      console.log("il y a une erreur");
+    }
+  };
+
   return (
     <WrapperContent>
       <WrapperImage>
@@ -49,11 +69,19 @@ const Institutionnel = () => {
       <WrapperInscription>
         <Title>Email</Title>
         <WrapperInput>
-          <input placeholder="Email" />
+          <input
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
         </WrapperInput>
         <Title>Mot de passe</Title>
         <WrapperInput>
-          <input placeholder="Mot de passe" />
+          <input
+            placeholder="Mot de passe"
+            value={pwd}
+            onChange={(e) => setPwd(e.target.value)}
+          />
         </WrapperInput>
         <Subtitle>
           Pas encore de compte ?
@@ -69,13 +97,17 @@ const Institutionnel = () => {
               </Button>
             </a>
           </Link>
-          <Link href="/OffreurDeCompetence/Conseil">
-            <a>
-              <Button>
+          <Button
+            onClick={() => {
+              handleSubmit();
+            }}
+          >
+            <Link href="/OffreurDeCompetence/Conseil">
+              <a>
                 <Text>Connexion</Text>
-              </Button>
-            </a>
-          </Link>
+              </a>
+            </Link>
+          </Button>
         </WrapperButton>
       </WrapperInscription>
       <Footer1>

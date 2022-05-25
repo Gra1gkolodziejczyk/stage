@@ -43,6 +43,27 @@ import Idea from "../../public/image/idea.png";
 import Plus from "../../public/image/plus.png";
 
 const Valeurs = () => {
+
+  const [valeurs, setValeurs] = useState("");
+
+  const handleSubmit = async (e) =>  {
+    console.log("Le click fonctionne");
+    try {
+    const response = await axios.post(config.api_url+"/api/portraiscopie/", 
+      JSON.stringify({ valeurs }),
+      {
+        headers : { 'Content-Type' : 'application/json' },
+        withCredentials: true,
+      }
+    );
+    console.log(JSON.stringify(response?.data));
+  } catch(err) {
+    if (!err?.response) {
+      console.log("Il y a une erreur");
+    }
+  }
+}
+
   return (
     <>
       <Header />
@@ -130,17 +151,15 @@ const Valeurs = () => {
           </WrapperImp>
           <Divider></Divider>
           <WrapperContent>
-            <Title>Vos valeurs pour cette compétence</Title>
-            <WrapperMenuDeroulant>
-              <input placeholder="Donnez ici une valeur relative à cette compétence" />
-
-              {/* Image 
-                  src={}
-                  alt={}
-                  width={}
-                  height={}
-              /> */}
-            </WrapperMenuDeroulant>
+            <Title>Vos valeurs pour cette compétence</Title>x
+          <WrapperMenuDeroulant>
+            <Text>Vos valeurs pour cette compétence</Text>
+            <input 
+              placeholder="Donnez ici une valeur relative à cette compétence"
+              value={valeurs}
+              onChange={(e) => setValeurs(e.target.value)}
+               />
+          </WrapperMenuDeroulant>
 
             <WrapperAjout>
               <Image src={Plus} alt={"PortraiScopie"} quality={100} />

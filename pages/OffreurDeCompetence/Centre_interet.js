@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../Header/Header2";
@@ -43,6 +43,27 @@ import Idea from "../../public/image/idea.png";
 import Plus from "../../public/image/plus.png";
 
 const Centre_interet = () => {
+
+  const [centre_interet, setCentre_interet] = useState("");
+
+  const handleSubmit = async (e) =>  {
+    console.log("Le click fonctionne");
+    try {
+    const response = await axios.post(config.api_url+"/api/portraiscopie/", 
+      JSON.stringify({ centre_interet }),
+      {
+        headers : { 'Content-Type' : 'application/json' },
+        withCredentials: true,
+      }
+    );
+    console.log(JSON.stringify(response?.data));
+  } catch(err) {
+    if (!err?.response) {
+      console.log("Il y a une erreur");
+    }
+  }
+}
+
   return (
     <>
       <Header />
@@ -133,40 +154,41 @@ const Centre_interet = () => {
             <Title>
               Vos centres d’intérêt qui mettent en lumière cette compétence
             </Title>
-            <WrapperMenuDeroulant>
-              <input placeholder="Précisez ici un centre d’intérêt pour cette compétence" />
+          <WrapperMenuDeroulant>
+            <Text>
+              Vos centres d'intérêt qui mettent en lumière cette compétence
+            </Text>
+            <input 
+              placeholder="Précisez ici une centre d'intérêt pour cette compétence" 
+              value={centre_interet}
+              onChange={(e) => setCentre_interet(e.target.value)}
+              />
+          </WrapperMenuDeroulant>
 
-              {/* Image 
-                  src={}
-                  alt={}
-                  width={}
-                  height={}
-              /> */}
-            </WrapperMenuDeroulant>
-
-            <WrapperAjout>
-              <Image src={Plus} alt={"PortraiScopie"} quality={100} />
-              <TextAjout>Ajouter</TextAjout>
-            </WrapperAjout>
-            <WrapperButton>
-              <ButtonLinkPrec>
-                <Link href="/OffreurDeCompetence/Talents">
-                  <a>
-                    <Text>Précédent</Text>
-                  </a>
-                </Link>
-              </ButtonLinkPrec>
-              <ButtonLink>
-                <Link href="/OffreurDeCompetence/Resumes">
-                  <a>
-                    <Text>Générer mon PortaiScopie</Text>
-                  </a>
-                </Link>
-              </ButtonLink>
-            </WrapperButton>
-          </WrapperContent>
-        </WrapperAll>
-      </Wrapper>
+          {/* Image du +
+                    src={}
+                    alt={}
+                    width={}
+                    height={}
+                /> */}
+          <Text>Ajouté</Text>
+          <ButtonLink>
+            <Link href="/OffreurDeCompetence/Talents">
+              <a>
+                <Text>Précédent</Text>
+              </a>
+            </Link>
+          </ButtonLink>
+          <ButtonLink onClick={() => {handleSubmit()}}>
+            <Link href="/OffreurDeCompetence/Resumes">
+              <a>
+                <Text>Suivant</Text>
+              </a>
+            </Link>
+          </ButtonLink>
+            </WrapperContent>
+          </WrapperAll>
+        </Wrapper>
     </>
   );
 };

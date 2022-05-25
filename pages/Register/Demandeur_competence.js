@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import Footer from "../Footer/Footer";
 import config from "../../config.json";
+import axios from "axios";
 
 import WrapperContent, {
   WrapperImage,
@@ -26,28 +26,41 @@ import axios from "axios";
 
 const Demandeur_competence = () => {
   const [entityName, setEntityName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
   const [pseudo, setPseudo] = useState("");
-  const [password, setPassword] = useState("");
 
-  async function signUp() {
-    let item = { entityName, firstName, lastName, email, pseudo, password };
-    console.warn(item);
-
-    let result = await fetch(config.api_url + "/api/users/", {
-      method: "POST",
-      body: JSON.stringify(item),
-      headers: {
-        "Content-Type": "application/json",
-        accept: "application/json",
-      },
-    });
-    result = await result.json();
-    localStorage.setItem(JSON.stringify(result));
-    console.warn(result);
-  }
+  const handleSubmit = async (e) => {
+    console.log("Le lien a été cliqué.");
+    try {
+      const response = await axios.post(
+        "https://portraiscopie-dev.herokuapp.com/api/users/",
+        JSON.stringify({
+          entityName,
+          firstName,
+          lastName,
+          password,
+          email,
+          pseudo,
+        }),
+        {
+          headers: { "Content-Type": "application/json" },
+          withCredentials: true,
+        }
+      );
+      console.log(JSON.stringify(response?.data));
+    } catch (err) {
+      if (!err?.response) {
+        console.log("No server Response");
+      } else if (err.response?.status === 405) {
+        console.log("Invalid url");
+      } else {
+        console.log("Registration Failed");
+      }
+    }
+  };
 
   return (
     <WrapperContent>
@@ -155,7 +168,7 @@ const Demandeur_competence = () => {
         <WrapperButton>
           <Button
             onClick={() => {
-              signUp();
+              handleSubmit();
             }}
           >
             <Link href="/OffreurDeCompetence/Conseil">

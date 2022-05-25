@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../Header/Header2";
+import axios from "axios";
 
 import WrapperTitle, {
   WrapperProgression,
@@ -45,6 +46,21 @@ import Idea from "../../public/image/idea.png";
 import Plus from "../../public/image/plus.png";
 
 const Metier = () => {
+
+  const [metier, setMetier] = useState("");
+
+  const handleSubmit = async (e) => {
+      try {
+        const response = await axios.post("https://portraiscopie-dev.herokuapp.com/api/portraiscopies/",
+          {
+            "occupations" : metier,
+          });  
+          console.log(response);
+        } catch(err) {
+          console.log('il y a une erreur');
+      }
+    }
+
   return (
     <>
       <Header />
@@ -144,7 +160,11 @@ const Metier = () => {
           <WrapperContent>
             <Title>Le metier exercé pour cette compétence</Title>
             <WrapperMenuDeroulant>
-              <input placeholder="Métier 1" />
+              <input 
+                placeholder="Métier 1" 
+                value={metier}
+                onChange={(e) => setMetier(e.target.value)}
+                />
 
               {/* Image 
                     src={}
@@ -196,7 +216,7 @@ const Metier = () => {
               <Image src={Plus} alt={"PortraiScopie"} quality={100} />
               <TextAjout>Ajouter</TextAjout>
             </WrapperAjout>
-            <WrapperButton>
+            <WrapperButton onClick={() => {handleSubmit()}}>
               <ButtonLink>
                 <Link href="/OffreurDeCompetence/Activites">
                   <a>

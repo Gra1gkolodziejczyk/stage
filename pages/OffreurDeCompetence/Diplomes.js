@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../Header/Header2";
+import axios from "axios";
 
 import WrapperTitle, {
   WrapperProgression,
@@ -45,6 +46,21 @@ import Idea from "../../public/image/idea.png";
 import Plus from "../../public/image/plus.png";
 
 const Diplomes = () => {
+
+  const [certification, setCertification] = useState("");
+
+  const handleSubmit = async (e) => {
+      try {
+        const response = await axios.post("https://portraiscopie-dev.herokuapp.com/api/portraiscopies/",
+          {
+            "certifications" : certification,
+          });  
+          console.log(response);
+        } catch(err) {
+          console.log('il y a une erreur');
+      }
+    }
+
   return (
     <>
       <Header />
@@ -134,7 +150,11 @@ const Diplomes = () => {
           <WrapperContent>
             <Title>Certificats/Diplômes pour cette compétence</Title>
             <WrapperMenuDeroulant>
-              <input placeholder="Ecrivez ici le diplôme ou habilitation obtenu" />
+              <input 
+                placeholder="Ecrivez ici le diplôme ou habilitation obtenu" 
+                value={certification}
+                onChange={(e) => setCertification(e.target.value)}
+                />
 
               {/* Image 
                 src={}
@@ -162,7 +182,7 @@ const Diplomes = () => {
                   </a>
                 </Link>
               </ButtonLinkPrec>
-              <ButtonLink>
+              <ButtonLink onClick={() => {handleSubmit()}}>
                 <Link href="/OffreurDeCompetence/Capacites">
                   <a>
                     <Text>Suivant</Text>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../Header/Header2";
@@ -43,6 +43,27 @@ import Idea from "../../public/image/idea.png";
 import Plus from "../../public/image/plus.png";
 
 const Technologies = () => {
+
+  const [technologie, setTechnologie] = useState("");
+
+  const handleSubmit = async (e) =>  {
+    console.log("Le click fonctionne");
+    try {
+    const response = await axios.post(config.api_url+"/api/portraiscopie/", 
+      JSON.stringify({ technologie }),
+      {
+        headers : { 'Content-Type' : 'application/json' },
+        withCredentials: true,
+      }
+    );
+    console.log(JSON.stringify(response?.data));
+  } catch(err) {
+    if (!err?.response) {
+      console.log("Il y a une erreur");
+    }
+  }
+}
+
   return (
     <>
       <Header />
@@ -142,27 +163,27 @@ const Technologies = () => {
               /> */}
             </WrapperMenuDeroulant>
 
-            <WrapperAjout>
-              <Image src={Plus} alt={"PortraiScopie"} quality={100} />
-              <TextAjout>Ajouter</TextAjout>
-            </WrapperAjout>
-            <WrapperButton>
-              <ButtonLinkPrec>
-                <Link href="/OffreurDeCompetence/Techniques">
-                  <a>
-                    <Text>Précédent</Text>
-                  </a>
-                </Link>
-              </ButtonLinkPrec>
-              <ButtonLink>
-                <Link href="/OffreurDeCompetence/Diplomes">
-                  <a>
-                    <Text>Suivant</Text>
-                  </a>
-                </Link>
-              </ButtonLink>
-            </WrapperButton>
-          </WrapperContent>
+          <input 
+            placeholder="technologies"
+            value={technologie}
+            onChange={(e) => setTechnologie(e.target.value)} 
+            />
+          <Text>Ajouté</Text>
+          <ButtonLink>
+            <Link href="/OffreurDeCompetence/Techniques">
+              <a>
+                <Text>Précédent</Text>
+              </a> 
+            </Link>
+          </ButtonLink>
+          <ButtonLink onClick={() => {handleSubmit()}}>
+            <Link href="/OffreurDeCompetence/Diplomes">
+              <a>
+                <Text>Suivant</Text>
+              </a>
+            </Link>
+          </ButtonLink>
+        </WrapperContent>
         </WrapperAll>
       </Wrapper>
     </>
