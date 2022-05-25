@@ -258,6 +258,7 @@ export const ButtonLink = styled.button`
   margin: 25px;
   line-height: 24px;
 `;
+
 export const WrapperCoche = styled.div`
   border: 2px solid #000000;
   width: 20px;

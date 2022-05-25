@@ -15,40 +15,40 @@ import {
 
 const Institutionnel = () => {
 
-  let item = {firstName, lastName, password, email, };
+  const [email, setEmail] = useState('');
+  const [pwd, setPwd] = useState('');
 
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [password, setPasssword] = useState("");
-  const [email, setEmail] = useState("");
-
-  async function signIn() {
-    let item = await fetch(config.api_url+"/api/users/", {
-      method: 'GET',
-      body: JSON.stringify(item),
-      headers:{
-        'Content-Type' : 'application/json',
-        'accept' : 'application/json'
-      }
-    });
-    result = await result.json();
-    localStorage.setItem(JSON.stringify(result));
-    console.warn(result);
+  const handleSubmit = async (e) => {
+    try {
+      const response = await axios.post("https://portraiscopie-dev.herokuapp.com/api/authenticate",
+        {
+          "email" : email,
+          "password" : pwd
+        });  
+        console.log(response);
+      } catch(err) {
+        console.log('il y a une erreur');
+    }
   }
-
-  // verify user_exist !
-  // -> créate function (=> conditions)   => get_api_data.js faire la function dedans et l'importer
 
   return (
     <WrapperContent>
       <WrapperInscription>
         <Title>Mail</Title>
         <WrapperInput>
-          <input placeholder="Mail" />
+          <input 
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
         </WrapperInput>
         <Title>Mot de passe</Title>
         <WrapperInput>
-          <input placeholder="Mot de passe" />
+          <input 
+            placeholder="Mot de passe"
+            value={pwd}
+            onChange={(e) => setPwd(e.target.value)}
+             />
         </WrapperInput>
         <Subtitle>
           Pas encore de compte ?
@@ -64,7 +64,7 @@ const Institutionnel = () => {
               </a>
             </Link>
           </Button>
-          <Button onClick={() => {signIn()}}>
+          <Button onClick={() => {handleSubmit()}}>
             <Link href="/OffreurDeCompetence/Conseil">
               <a>
                 <Text>Connexion</Text>

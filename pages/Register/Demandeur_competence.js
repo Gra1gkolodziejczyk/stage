@@ -26,10 +26,10 @@ const Demandeur_competence = () => {
   const handleSubmit = async (e) =>  {
     console.log('Le lien a été cliqué.');
     try {
-    const response = await axios.post(config.api_url+"/api/users/", 
+    const response = await axios.post("https://portraiscopie-dev.herokuapp.com/api/users/", 
       JSON.stringify({ entityName, firstName, lastName, password, email, pseudo }),
       {
-        headers : { 'Content-Type' : 'application/json' },
+        headers : {'Content-Type' : 'application/json'},
         withCredentials: true,
       }
     );

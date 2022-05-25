@@ -25,23 +25,17 @@ const Competence = () => {
   
   const [competence, setCompetence] = useState("");
 
-  const handleSubmit = async (e) =>  {
-    console.log("Le click fonctionne");
+  const handleSubmit = async (e) => {
     try {
-    const response = await axios.post(config.api_url+"/api/technicals/", 
-      JSON.stringify({ competence }),
-      {
-        headers : { 'Content-Type' : 'application/json' },
-        withCredentials: true,
-      }
-    );
-    console.log(JSON.stringify(response?.data));
-  } catch(err) {
-    if (!err?.response) {
-      console.log("Il y à une erreur...");
+      const response = await axios.post("https://portraiscopie-dev.herokuapp.com/api/portraiscopies/",
+        {
+          "skills" : competence,
+        });  
+        console.log(response);
+      } catch(err) {
+        console.log('il y a une erreur');
     }
   }
-}
 
   return (
     <>
