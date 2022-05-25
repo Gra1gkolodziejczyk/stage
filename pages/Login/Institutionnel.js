@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import Footer from "../Footer/Footer";
 import Link from "next/link";
+import axios from "axios";
 
 import {
   WrapperContent,
@@ -12,6 +13,7 @@ import {
   Button,
   Text,
 } from "./Institutionnel.style";
+import axios from "axios";
 
 const Institutionnel = () => {
 
