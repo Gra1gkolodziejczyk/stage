@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Footer from "../Footer/Footer";
 
 const WrapperContent = styled.div`
   display: flex;
@@ -33,6 +34,7 @@ export const WrapperCocheAll = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  height: auto;
 `;
 
 export const WrapperCocheLeft = styled.div`
@@ -75,5 +77,7 @@ export const TextBottom = styled.h2`
   justify-content: center;
   align-items: center;
 `;
+
+export const Footer1 = styled.div``;
 
 export default WrapperContent;

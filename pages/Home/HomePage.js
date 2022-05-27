@@ -3,6 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import WrapperContent, {
   WrapperContentLeft,
+  WrapperBox,
+  WrapperDialog,
+  Wrapper1,
+  Wrapper2,
+  Wrapper3,
+  TextBox,
   WrapperImageTop,
   WrapperImageBottom,
   Text,
@@ -33,13 +39,19 @@ const HomePage = () => {
 
       <WrapperContentMiddle>
         <WrapperContentLeft>
-          <Image
-            src={boiteDeDialogue}
-            alt={"Boite De dialogue"}
-            quality={100}
-            width={500}
-            height={400}
-          />
+          <WrapperBox>
+            <WrapperDialog>
+              <Wrapper1>
+                <TextBox>
+                  L’AVENTURE <br />
+                  PORTRAISCOPIE <br />
+                  COMMENCE ICI
+                </TextBox>
+              </Wrapper1>
+              <Wrapper2></Wrapper2>
+              <Wrapper3></Wrapper3>
+            </WrapperDialog>
+          </WrapperBox>
           <Image
             className="img"
             src={FourmiBleu}

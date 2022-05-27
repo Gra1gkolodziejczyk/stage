@@ -14,6 +14,7 @@ import WrapperContent, {
   Coche,
   ButtonLink,
   TextBottom,
+  Footer1,
 } from "./Raison.style";
 
 const Raison = () => {
@@ -119,7 +120,9 @@ const Raison = () => {
           </Link>
         </ButtonLink>
       </WrapperContent>
-      <Footer />
+      <Footer1>
+        <Footer />
+      </Footer1>
     </>
   );
 };

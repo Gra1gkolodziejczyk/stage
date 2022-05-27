@@ -3,10 +3,8 @@ import styled from "styled-components";
 const FooterWrapper = styled.div`
   background-color: #3b3361;
   color: white;
-  position: relative;
-  bottom: 0px;
-  left: 0;
-  right: 0;
+  position: sticky;
+
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -25,11 +23,9 @@ export const ImageWrapper = styled.div``;
 `;*/
 
 export const ContentWrapper = styled.div`
+  background-color: #3b3361;
+  color: white;
   display: flex;
-  position: sticky;
-  bottom: 0;
-  left: 0;
-  right: 0;
 `;
 
 export const Text = styled.h2`

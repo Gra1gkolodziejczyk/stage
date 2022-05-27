@@ -12,6 +12,7 @@ import Container, {
   WrapperImage,
   Button,
   ButtonLink,
+  Footer1,
 } from "./Conseil.style";
 
 import Flêche from "../../public/image/Fleche-droite.png";
@@ -19,8 +20,8 @@ import Flêche from "../../public/image/Fleche-droite.png";
 const Conseil = () => {
   return (
     <>
-      <Header1 />
       <Container>
+        <Header1 />
         <WrapperTitle>
           <TextTop>
             Pour une bonne prise en main de votre PortraiScopie, veuillez suivre
@@ -61,7 +62,9 @@ const Conseil = () => {
           </Link>
         </ButtonLink>
       </Container>
-      <Footer />
+      <Footer1>
+        <Footer />
+      </Footer1>
     </>
   );
 };

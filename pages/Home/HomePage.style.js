@@ -3,12 +3,69 @@ import styled from "styled-components";
 const WrapperContent = styled.div``;
 
 export const WrapperContentLeft = styled.div`
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   img {
     width: 280px;
     height: 200px;
     display: flex;
     justify-content: center;
+    filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
   }
+`;
+
+export const WrapperBox = styled.div`
+  padding-bottom: 200px;
+`;
+
+export const WrapperDialog = styled.div`
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+`;
+
+export const Wrapper1 = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  height: 250px;
+  border-radius: 250px / 140px;
+  background: #ffffff;
+  border: 1px solid #2a3985;
+  filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
+`;
+
+export const Wrapper2 = styled.div`
+  position: absolute;
+  top: 570px;
+  width: 200px;
+  height: 110px;
+  border-radius: 250px / 140px;
+  background: #ffffff;
+  border: 1px solid #2a3985;
+  filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
+`;
+
+export const Wrapper3 = styled.div`
+  position: absolute;
+  top: 650px;
+  width: 90px;
+  height: 50px;
+  border-radius: 250px / 140px;
+  background: #ffffff;
+  border: 1px solid #2a3985;
+  filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
+`;
+
+export const TextBox = styled.div`
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 60px;
+  text-align: center;
+  color: #2a3985;
 `;
 
 export const WrapperImageTop = styled.div`
