@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Header2 from "../Header/Header2";
@@ -24,20 +24,21 @@ import WrapperContent, {
 import Idea from "../../public/image/Idea.png";
 
 const Competence = () => {
-  
   const [competence, setCompetence] = useState("");
 
   const handleSubmit = async (e) => {
     try {
-      const response = await axios.post("https://portraiscopie-dev.herokuapp.com/api/portraiscopies/",
+      const response = await axios.post(
+        "https://portraiscopie-dev.herokuapp.com/api/portraiscopies/",
         {
-          "skills" : competence,
-        });  
-        console.log(response);
-      } catch(err) {
-        console.log('il y a une erreur');
+          skills: competence,
+        }
+      );
+      console.log(response);
+    } catch (err) {
+      console.log("il y a une erreur");
     }
-  }
+  };
 
   return (
     <>
@@ -45,13 +46,22 @@ const Competence = () => {
       <WrapperContent>
         <WrapperTitle>
           <Title>Mon PortraiScopie Mes Compétences mises en Avant !</Title>
-          <TextTitle>PortraiScopie ouvre la voie à l'expression de la compétence et aux savoirs comportementaux rattachés</TextTitle>
+          <TextTitle>
+            PortraiScopie ouvre la voie à l'expression de la compétence et aux
+            savoirs comportementaux rattachés
+          </TextTitle>
         </WrapperTitle>
         <WrapperCompetence>
           <WrapperTop>
             <TextTop>Ma compétence</TextTop>
             <WrapperImage>
-              <Image src={Idea} alt={"Idée"} quality={100} />
+              <Image
+                src={Idea}
+                alt={"Idée"}
+                quality={100}
+                width={30}
+                height={30}
+              />
             </WrapperImage>
           </WrapperTop>
           <Text>
@@ -59,14 +69,18 @@ const Competence = () => {
             excellez
           </Text>
           <WrapperInput>
-            <input 
-              placeholder="Compétence" 
+            <input
+              placeholder="Compétence"
               value={competence}
               onChange={(e) => setCompetence(e.target.value)}
             />
           </WrapperInput>
           <WrapperButton>
-            <ButtonLinkLeft onClick={() => {handleSubmit()}}>
+            <ButtonLinkLeft
+              onClick={() => {
+                handleSubmit();
+              }}
+            >
               <Link href="/OffreurDeCompetence/Competence">
                 <a>
                   <TextBottom>Enregistrer et Quitter</TextBottom>

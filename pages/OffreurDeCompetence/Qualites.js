@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../Header/Header2";
@@ -43,27 +43,26 @@ import Idea from "../../public/image/idea.png";
 import Plus from "../../public/image/plus.png";
 
 const Qualites = () => {
-
   const [qualites, setQualites] = useState("");
-  
-  const handleSubmit = async (e) =>  {
+
+  const handleSubmit = async (e) => {
     console.log("Le click fonctionne");
     try {
-    const response = await axios.post(config.api_url+"/api/portraiscopie/", 
-      JSON.stringify({ qualites, items }),
-      {
-        headers : { 'Content-Type' : 'application/json' },
-        withCredentials: true,
+      const response = await axios.post(
+        config.api_url + "/api/portraiscopie/",
+        JSON.stringify({ qualites, items }),
+        {
+          headers: { "Content-Type": "application/json" },
+          withCredentials: true,
+        }
+      );
+      console.log(JSON.stringify(response?.data));
+    } catch (err) {
+      if (!err?.response) {
+        console.log("Il y à une erreur...");
       }
-    );
-    console.log(JSON.stringify(response?.data));
-  } catch(err) {
-    if (!err?.response) {
-      console.log("Il y à une erreur...");
     }
-  }
-}
-
+  };
 
   return (
     <>
@@ -154,41 +153,12 @@ const Qualites = () => {
           <WrapperContent>
             <Title>Vos qualités mises en avant pour cette compétence</Title>
             <WrapperMenuDeroulant>
-              <input placeholder="Donnez ici une qualité relative à cette compétence" />
-
-<<<<<<< HEAD
-          <WrapperMenuDeroulant>
-            <Text>Vos qualités mise en avant pour cette compétence</Text>
-            <input 
-              placeholder="Donnez ici une qualité relative à cette personne" 
-              value={qualites}
-              onChange={(e) => setQualites(e.target.value)}
+              <input
+                placeholder="Donnez ici une qualité relative à cette compétence"
+                value={qualites}
+                onChange={(e) => setQualites(e.target.value)}
               />
-          </WrapperMenuDeroulant>
 
-          {/* Image du +
-                    src={}
-                    alt={}
-                    width={}
-                    height={}
-                /> */}
-          <Text>Ajouté</Text>
-          <ButtonLink onClick={() => {handleSubmit()}}>
-            <Link href="/OffreurDeCompetence/Capacites">
-              <a>
-                <Text>Précédent</Text>
-              </a>
-            </Link>
-          </ButtonLink>
-          <ButtonLink>
-            <Link href="/OffreurDeCompetence/Valeurs">
-              <a>
-                <Text>Suivant</Text>
-              </a>
-            </Link>
-          </ButtonLink>
-        </WrapperContent>
-=======
               {/* Image 
                   src={}
                   alt={}
@@ -202,7 +172,11 @@ const Qualites = () => {
               <TextAjout>Ajouter</TextAjout>
             </WrapperAjout>
             <WrapperButton>
-              <ButtonLinkPrec>
+              <ButtonLinkPrec
+                onClick={() => {
+                  handleSubmit();
+                }}
+              >
                 <Link href="/OffreurDeCompetence/Capacites">
                   <a>
                     <Text>Précédent</Text>
@@ -219,7 +193,6 @@ const Qualites = () => {
             </WrapperButton>
           </WrapperContent>
         </WrapperAll>
->>>>>>> 133c992facee42a270397fe2a60ff2fa97a1a8fa
       </Wrapper>
     </>
   );

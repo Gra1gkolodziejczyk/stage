@@ -158,7 +158,7 @@ export const TitleColor = styled.h2`
 `;
 
 export const Title = styled.h2`
-  padding-left: 30px;
+  padding-left: 90px;
   font-size: 20px;
 `;
 
@@ -213,6 +213,7 @@ export const WrapperContent = styled.div`
 `;
 
 export const WrapperMenuDeroulant = styled.div`
+  padding-left: 70px;
   display: flex;
   flex-direction: row;
   input {
@@ -229,6 +230,7 @@ export const WrapperMenuDeroulant = styled.div`
 `;
 
 export const WrapperAjout = styled.div`
+  padding-left: 70px;
   padding-top: 10px;
   margin-left: 25px;
   display: flex;

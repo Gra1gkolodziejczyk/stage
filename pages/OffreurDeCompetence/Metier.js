@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../Header/Header2";
@@ -6,7 +6,17 @@ import axios from "axios";
 
 import WrapperTitle, {
   WrapperProgression,
-  DividerTop,
+  DividerTop1,
+  DividerTop2,
+  DividerTop3,
+  DividerTop4,
+  DividerTop5,
+  DividerTop6,
+  DividerTop7,
+  DividerTop8,
+  DividerTop9,
+  DividerTop10,
+  DividerTop11,
   Wrapper1,
   Wrapper2,
   Wrapper3,
@@ -18,7 +28,17 @@ import WrapperTitle, {
   Wrapper9,
   Wrapper10,
   Wrapper11,
-  TextTop,
+  TextTop1,
+  TextTop2,
+  TextTop3,
+  TextTop4,
+  TextTop5,
+  TextTop6,
+  TextTop7,
+  TextTop8,
+  TextTop9,
+  TextTop10,
+  TextTop11,
   TextBottom,
   WrapperTop,
   Title,
@@ -46,20 +66,21 @@ import Idea from "../../public/image/idea.png";
 import Plus from "../../public/image/plus.png";
 
 const Metier = () => {
-
   const [metier, setMetier] = useState("");
 
   const handleSubmit = async (e) => {
-      try {
-        const response = await axios.post("https://portraiscopie-dev.herokuapp.com/api/portraiscopies/",
-          {
-            "occupations" : metier,
-          });  
-          console.log(response);
-        } catch(err) {
-          console.log('il y a une erreur');
-      }
+    try {
+      const response = await axios.post(
+        "https://portraiscopie-dev.herokuapp.com/api/portraiscopies/",
+        {
+          occupations: metier,
+        }
+      );
+      console.log(response);
+    } catch (err) {
+      console.log("il y a une erreur");
     }
+  };
 
   return (
     <>
@@ -75,77 +96,77 @@ const Metier = () => {
         <WrapperAll>
           <WrapperProgression>
             <Wrapper1>
-              <TextTop>1</TextTop>
-              <DividerTop></DividerTop>
+              <TextTop1>1</TextTop1>
+              <DividerTop1></DividerTop1>
               <TextBottom>Métier</TextBottom>
             </Wrapper1>
 
             <Wrapper2>
-              <DividerTop></DividerTop>
-              <TextTop>2</TextTop>
-              <DividerTop></DividerTop>
+              <DividerTop2></DividerTop2>
+              <TextTop2>2</TextTop2>
+              <DividerTop2></DividerTop2>
               <TextBottom>Activités</TextBottom>
             </Wrapper2>
 
             <Wrapper3>
-              <DividerTop></DividerTop>
-              <TextTop>3</TextTop>
-              <DividerTop></DividerTop>
+              <DividerTop3></DividerTop3>
+              <TextTop3>3</TextTop3>
+              <DividerTop3></DividerTop3>
               <TextBottom>Tâches</TextBottom>
             </Wrapper3>
 
             <Wrapper4>
-              <DividerTop></DividerTop>
-              <TextTop>4</TextTop>
-              <DividerTop></DividerTop>
+              <DividerTop4></DividerTop4>
+              <TextTop4>4</TextTop4>
+              <DividerTop4></DividerTop4>
               <TextBottom>Techniques</TextBottom>
             </Wrapper4>
 
             <Wrapper5>
-              <DividerTop></DividerTop>
-              <TextTop>5</TextTop>
-              <DividerTop></DividerTop>
+              <DividerTop5></DividerTop5>
+              <TextTop5>5</TextTop5>
+              <DividerTop5></DividerTop5>
               <TextBottom>Technologies</TextBottom>
             </Wrapper5>
 
             <Wrapper6>
-              <DividerTop></DividerTop>
-              <TextTop>6</TextTop>
-              <DividerTop></DividerTop>
+              <DividerTop6></DividerTop6>
+              <TextTop6>6</TextTop6>
+              <DividerTop6></DividerTop6>
               <TextBottom>Diplômes</TextBottom>
             </Wrapper6>
 
             <Wrapper7>
-              <DividerTop></DividerTop>
-              <TextTop>7</TextTop>
-              <DividerTop></DividerTop>
+              <DividerTop7></DividerTop7>
+              <TextTop7>7</TextTop7>
+              <DividerTop7></DividerTop7>
               <TextBottom>Capacités</TextBottom>
             </Wrapper7>
 
             <Wrapper8>
-              <DividerTop></DividerTop>
-              <TextTop>8</TextTop>
-              <DividerTop></DividerTop>
+              <DividerTop8></DividerTop8>
+              <TextTop8>8</TextTop8>
+              <DividerTop8></DividerTop8>
               <TextBottom>Qualités</TextBottom>
             </Wrapper8>
 
             <Wrapper9>
-              <DividerTop></DividerTop>
-              <TextTop>9</TextTop>
-              <DividerTop></DividerTop>
+              <DividerTop9></DividerTop9>
+              <TextTop9>9</TextTop9>
+              <DividerTop9></DividerTop9>
               <TextBottom>Valeurs</TextBottom>
             </Wrapper9>
 
             <Wrapper10>
-              <DividerTop></DividerTop>
-              <TextTop>10</TextTop>
-              <DividerTop></DividerTop>
+              <DividerTop10></DividerTop10>
+              <TextTop10>10</TextTop10>
+              <DividerTop10></DividerTop10>
               <TextBottom>Talents</TextBottom>
             </Wrapper10>
 
             <Wrapper11>
-              <DividerTop></DividerTop>
-              <TextTop>11</TextTop>
+              <DividerTop11></DividerTop11>
+              <TextTop11>11</TextTop11>
               <TextBottom>Centre d'intérêt</TextBottom>
             </Wrapper11>
           </WrapperProgression>
@@ -160,11 +181,11 @@ const Metier = () => {
           <WrapperContent>
             <Title>Le metier exercé pour cette compétence</Title>
             <WrapperMenuDeroulant>
-              <input 
-                placeholder="Métier 1" 
+              <input
+                placeholder="Métier 1"
                 value={metier}
                 onChange={(e) => setMetier(e.target.value)}
-                />
+              />
 
               {/* Image 
                     src={}
@@ -216,7 +237,11 @@ const Metier = () => {
               <Image src={Plus} alt={"PortraiScopie"} quality={100} />
               <TextAjout>Ajouter</TextAjout>
             </WrapperAjout>
-            <WrapperButton onClick={() => {handleSubmit()}}>
+            <WrapperButton
+              onClick={() => {
+                handleSubmit();
+              }}
+            >
               <ButtonLink>
                 <Link href="/OffreurDeCompetence/Activites">
                   <a>
