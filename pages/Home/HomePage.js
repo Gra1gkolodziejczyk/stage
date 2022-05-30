@@ -62,14 +62,14 @@ const HomePage = () => {
 
         <WrapperContentRight>
           <WrapperButton>
-            <Link href="/Register/Demandeur_competence">
+            <Link href="/Register/DemandeurDeCompetence/Demandeur_competence">
               <a>
                 <Button>
                   <Text>Crée un compte Demandeur de compétence</Text>
                 </Button>
               </a>
             </Link>
-            <Link href="/Login/Demandeur_competence">
+            <Link href="/Login/DemandeurDeCompetence/Demandeur_competence">
               <a>
                 <Button>
                   <Text>Connexion Demandeur de compétence</Text>
@@ -79,14 +79,14 @@ const HomePage = () => {
           </WrapperButton>
 
           <WrapperButton>
-            <Link href="/Register/Institutionnel">
+            <Link href="/Register/Institutionnel/Institutionnel">
               <a>
                 <Button>
                   <Text>Crée un compte Institutionnels</Text>
                 </Button>
               </a>
             </Link>
-            <Link href="/Login/Institutionnel">
+            <Link href="/Login/Institutionnel/Institutionnel">
               <a>
                 <Button>
                   <Text>Connexion Institutionnels</Text>
@@ -96,14 +96,14 @@ const HomePage = () => {
           </WrapperButton>
 
           <WrapperButton>
-            <Link href="/Register/Offreur_de_competence">
+            <Link href="/Register/OffreurDeCompetence/Offreur_de_competence">
               <a>
                 <Button>
                   <Text>Crée un compte Offreur de compétence</Text>
                 </Button>
               </a>
             </Link>
-            <Link href="/Login/Offreur_de_competence">
+            <Link href="/Login/OffreurDeCompetence/Offreur_de_competence">
               <a>
                 <Button>
                   <Text>Connexion Offreur de compétence</Text>

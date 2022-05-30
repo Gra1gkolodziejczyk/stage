@@ -45,7 +45,7 @@ const Header2 = () => {
             </a>
           </Link>
 
-          <Link href="/OffreurDeCompetence/Profil">
+          <Link href="/OffreurDeCompetence/Profil/Profil">
             <a>
               <Image
                 src={Profil}
@@ -67,7 +67,7 @@ const Header2 = () => {
               <Title>Accueil</Title>
             </a>
           </Link>
-          <Link href="/OffreurDeCompetence/Resumes">
+          <Link href="/OffreurDeCompetence/Resume/Resume">
             <a>
               <Title>Visualisation</Title>
             </a>
