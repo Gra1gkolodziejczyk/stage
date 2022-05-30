@@ -15,7 +15,7 @@ import Link from "next/link";
 // IMAGES
 import Myrhmica from "../../public/image/Myrhmica-color-remove.png";
 import PortraitScopie from "../../public/image/PortraitScopie-remove.png";
-import Profile from "../../public/image/profil.png";
+import Profil from "../../public/image/profil.png";
 
 const Header2 = () => {
   return (
@@ -45,16 +45,16 @@ const Header2 = () => {
             </a>
           </Link>
 
-          <Link href="/profile">
+          <Link href="/OffreurDeCompetence/Profil">
             <a>
               <Image
-                src={Profile}
-                alt={"Profile"}
+                src={Profil}
+                alt={"Profil"}
                 quality={100}
-                width={60}
-                height={60}
+                width={40}
+                height={40}
               />
-              <Text>Profile</Text>
+              <Text>Profil</Text>
             </a>
           </Link>
         </WrapperImage>
@@ -67,9 +67,9 @@ const Header2 = () => {
               <Title>Accueil</Title>
             </a>
           </Link>
-          <Link href="/">
+          <Link href="/OffreurDeCompetence/Resumes">
             <a>
-              <Title>Offres</Title>
+              <Title>Visualisation</Title>
             </a>
           </Link>
         </WrapperTitle>

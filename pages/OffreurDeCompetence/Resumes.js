@@ -5,20 +5,27 @@ import Header from "../Header/Header2";
 
 import WrapperTitle, {
   Title,
+  TitleTop,
   Text,
+  WrapperAll,
   Wrapper,
+  WrapperTop,
+  WrapperMiddle,
+  WrapperBottom,
   WrapperActivite,
   WrapperTaches,
   WrapperTechnologies,
   WrapperDiplomes,
   WrapperMetiers,
   WrapperCompetence,
+  Competence,
   WrapperCentre_interet,
   WrapperCapacites,
   WrapperQualites,
   WrapperTalents,
   WrapperValeurs,
   WrapperCopyright,
+  ButtonLink,
   WrapperButton,
 } from "./Resumes.style";
 
@@ -27,65 +34,74 @@ const Resumes = () => {
     <>
       <Header />
       <WrapperTitle>
-        <Title>Imprimer mon PortraiScopie</Title>
+        <ButtonLink>
+          <Link href="/OffreurDeCompetence/Modif">
+            <a>
+              <TitleTop>Ajouter ou Modifier</TitleTop>
+            </a>
+          </Link>
+        </ButtonLink>
+        <TitleTop>Imprimer mon PortraiScopie</TitleTop>
       </WrapperTitle>
-
-      <Wrapper>
-        <WrapperActivite>
-          <Title>Activites</Title>
-          {/**/}
-        </WrapperActivite>
-        <WrapperTaches>
-          <Title>Tâches</Title>
-          {/**/}
-        </WrapperTaches>
-        <WrapperTechnologies>
-          <Title>Technologies/Techniques</Title>
-          {/**/}
-        </WrapperTechnologies>
-        <WrapperDiplomes>
-          <Title>Diplômes / Habilitations / Certificats</Title>
-          {/**/}
-        </WrapperDiplomes>
-        <WrapperMetiers>
-          <Title>Métiers</Title>
-          {/**/}
-        </WrapperMetiers>
-        <WrapperCompetence>
-          <Title>Libellé de compétences</Title>
-          {/**/}
-        </WrapperCompetence>
-        <WrapperCentre_interet>
-          <Title>Centre d'intérêt</Title>
-          {/**/}
-        </WrapperCentre_interet>
-        <WrapperCapacites>
-          <Title>Capacités</Title>
-          {/**/}
-        </WrapperCapacites>
-        <WrapperQualites>
-          <Title>Qualités</Title>
-          {/**/}
-        </WrapperQualites>
-        <WrapperTalents>
-          <Title>Talents</Title>
-          {/**/}
-        </WrapperTalents>
-        <WrapperValeurs>
-          <Title>Valeurs</Title>
-          {/**/}
-        </WrapperValeurs>
-        <WrapperCopyright>
-          <Text>PortraiScopie © (copyright)</Text>
-        </WrapperCopyright>
-      </Wrapper>
-      <WrapperButton>
-        <Link href="/OffreurDeCompetence/Compte">
-          <a>
-            <Text>Accéder à votre compte</Text>
-          </a>
-        </Link>
-      </WrapperButton>
+      <WrapperAll>
+        <Wrapper>
+          <WrapperTop>
+            <WrapperActivite>
+              <Title>Activites</Title>
+              {/**/}
+            </WrapperActivite>
+            <WrapperTaches>
+              <Title>Tâches</Title>
+              {/**/}
+            </WrapperTaches>
+            <WrapperTechnologies>
+              <Title>Technologies / Techniques</Title>
+              {/**/}
+            </WrapperTechnologies>
+            <WrapperDiplomes>
+              <Title>Diplômes / Habilitations / Certificats</Title>
+              {/**/}
+            </WrapperDiplomes>
+          </WrapperTop>
+          <WrapperMiddle>
+            <WrapperMetiers>
+              <Title>Métiers</Title>
+              {/**/}
+            </WrapperMetiers>
+            <WrapperCompetence>
+              <Competence>
+                <Title>Libellé de compétences</Title>
+                {/**/}
+              </Competence>
+            </WrapperCompetence>
+            <WrapperCentre_interet>
+              <Title>Centre d'intérêt</Title>
+              {/**/}
+            </WrapperCentre_interet>
+          </WrapperMiddle>
+          <WrapperBottom>
+            <WrapperCapacites>
+              <Title>Capacités</Title>
+              {/**/}
+            </WrapperCapacites>
+            <WrapperQualites>
+              <Title>Qualités</Title>
+              {/**/}
+            </WrapperQualites>
+            <WrapperTalents>
+              <Title>Talents</Title>
+              {/**/}
+            </WrapperTalents>
+            <WrapperValeurs>
+              <Title>Valeurs</Title>
+              {/**/}
+            </WrapperValeurs>
+          </WrapperBottom>
+          <WrapperCopyright>
+            <Text>PortraiScopie © (copyright)</Text>
+          </WrapperCopyright>
+        </Wrapper>
+      </WrapperAll>
     </>
   );
 };
