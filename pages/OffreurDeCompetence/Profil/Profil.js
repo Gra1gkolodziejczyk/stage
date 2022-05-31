@@ -41,7 +41,7 @@ const Profil = () => {
           <ButtonLink>
             <Link href="/OffreurDeCompetence/Resumes/Resumes">
               <a>
-                <TextTopButton>Visualisé mon PortaiScopie</TextTopButton>
+                <TextTopButton>Visualiser mon PortaiScopie</TextTopButton>
               </a>
             </Link>
           </ButtonLink>
@@ -63,7 +63,7 @@ const Profil = () => {
         <WrapperBottom>
           <Link href="/OffreurDeCompetence/Metier/Metier">
             <a>
-              <TextBottom>Métier</TextBottom>
+              <TextBottom>Métiers</TextBottom>
             </a>
           </Link>
           <Link href="/OffreurDeCompetence/Activites/Activites">
@@ -113,7 +113,7 @@ const Profil = () => {
           </Link>
           <Link href="/OffreurDeCompetence/Centre_interet/Centre_interet">
             <a>
-              <TextBottom>Centre d’intérêt</TextBottom>
+              <TextBottom>Centres d’intérêt</TextBottom>
             </a>
           </Link>
         </WrapperBottom>

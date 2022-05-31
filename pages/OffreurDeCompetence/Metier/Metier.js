@@ -98,7 +98,11 @@ const Metier = () => {
             <Wrapper1>
               <TextTop1>1</TextTop1>
               <DividerTop1></DividerTop1>
-              <TextBottom>Métier</TextBottom>
+              <Link href="/OffreurDeCompetence/Metier/Metier">
+                <a>
+                  <TextBottom>Métier</TextBottom>
+                </a>
+              </Link>
             </Wrapper1>
 
             <Wrapper2>

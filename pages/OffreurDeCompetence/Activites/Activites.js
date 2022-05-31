@@ -59,7 +59,11 @@ const Activites = () => {
             <Wrapper1>
               <TextTop>1</TextTop>
               <DividerTop></DividerTop>
-              <TextBottom>Métier</TextBottom>
+              <Link href="/OffreurDeCompetence/Metier/Metier">
+                <a>
+                  <TextBottom>Métier</TextBottom>
+                </a>
+              </Link>
             </Wrapper1>
             <Wrapper2>
               <DividerTop></DividerTop>

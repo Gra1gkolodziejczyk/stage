@@ -75,7 +75,7 @@ const Resumes = () => {
               </Competence>
             </WrapperCompetence>
             <WrapperCentre_interet>
-              <Title>Centre d'intérêt</Title>
+              <Title>Centres d'intérêt</Title>
               {/**/}
             </WrapperCentre_interet>
           </WrapperMiddle>
