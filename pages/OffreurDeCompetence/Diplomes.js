@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../Header/Header2";
@@ -155,13 +155,6 @@ const Diplomes = () => {
                 value={certification}
                 onChange={(e) => setCertification(e.target.value)}
                 />
-
-              {/* Image 
-                src={}
-                alt={}
-                width={}
-                height={}
-            /> */}
             </WrapperMenuDeroulant>
 
             <WrapperAjout>

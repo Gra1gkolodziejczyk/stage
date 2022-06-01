@@ -1,7 +1,8 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../Header/Header2";
+import axios from "axios";
 
 import WrapperTitle, {
   WrapperProgression,
@@ -25,7 +26,6 @@ import WrapperTitle, {
   Title,
   TitleImp,
   Text,
-  TextAjout,
   Wrapper,
   WrapperAll,
   WrapperImp,
@@ -33,34 +33,29 @@ import WrapperTitle, {
   Divider,
   WrapperContent,
   WrapperMenuDeroulant,
-  WrapperAjout,
   ButtonLink,
-  ButtonLinkPrec,
-  WrapperButton,
 } from "./Centre_interet.style";
 
 import Idea from "../../public/image/idea.png";
-import Plus from "../../public/image/plus.png";
 
 const Centre_interet = () => {
 
   const [centre_interet, setCentre_interet] = useState("");
 
+  useEffect(() => {
+    localStorage.setItem("centre d'intérêts", JSON.stringify(centre_interet)
+    );}, [centre_interet]);
+
   const handleSubmit = async (e) =>  {
-    console.log("Le click fonctionne");
     try {
-    const response = await axios.post(config.api_url+"/api/portraiscopie/", 
-      JSON.stringify({ centre_interet }),
+    const response = await axios.post("https://portraiscopie-dev.herokuapp.com/api/portraiscopies/", 
       {
-        headers : { 'Content-Type' : 'application/json' },
-        withCredentials: true,
+        "centre d'intérêts" : centre_interet,
       }
     );
-    console.log(JSON.stringify(response?.data));
+    console.log(response);
   } catch(err) {
-    if (!err?.response) {
       console.log("Il y a une erreur");
-    }
   }
 }
 
@@ -164,13 +159,6 @@ const Centre_interet = () => {
               onChange={(e) => setCentre_interet(e.target.value)}
               />
           </WrapperMenuDeroulant>
-
-          {/* Image du +
-                    src={}
-                    alt={}
-                    width={}
-                    height={}
-                /> */}
           <Text>Ajouté</Text>
           <ButtonLink>
             <Link href="/OffreurDeCompetence/Talents">

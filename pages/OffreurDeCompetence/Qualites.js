@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../Header/Header2";
@@ -45,24 +45,22 @@ import Plus from "../../public/image/plus.png";
 const Qualites = () => {
 
   const [qualites, setQualites] = useState("");
+
+  useEffect(() => {
+  localStorage.setItem("qualités", JSON.stringify(qualites));
+}, [qualites]);
   
-  const handleSubmit = async (e) =>  {
-    console.log("Le click fonctionne");
-    try {
-    const response = await axios.post(config.api_url+"/api/portraiscopie/", 
-      JSON.stringify({ qualites, items }),
-      {
-        headers : { 'Content-Type' : 'application/json' },
-        withCredentials: true,
+  const handleSubmit = async (e) => {
+      try {
+        const response = await axios.post("https://portraiscopie-dev.herokuapp.com/api/portraiscopies/",
+          {
+            "qualités" : qualites,
+          });  
+          console.log(response);
+        } catch(err) {
+          console.log('il y a une erreur');
       }
-    );
-    console.log(JSON.stringify(response?.data));
-  } catch(err) {
-    if (!err?.response) {
-      console.log("Il y à une erreur...");
     }
-  }
-}
 
 
   return (
@@ -76,7 +74,6 @@ const Qualites = () => {
       </WrapperTitle>
 
       <Wrapper>
-        <WrapperAll>
           <WrapperProgression>
             <Wrapper1>
               <TextTop>1</TextTop>
@@ -153,10 +150,6 @@ const Qualites = () => {
           <Divider></Divider>
           <WrapperContent>
             <Title>Vos qualités mises en avant pour cette compétence</Title>
-            <WrapperMenuDeroulant>
-              <input placeholder="Donnez ici une qualité relative à cette compétence" />
-
-<<<<<<< HEAD
           <WrapperMenuDeroulant>
             <Text>Vos qualités mise en avant pour cette compétence</Text>
             <input 
@@ -188,38 +181,6 @@ const Qualites = () => {
             </Link>
           </ButtonLink>
         </WrapperContent>
-=======
-              {/* Image 
-                  src={}
-                  alt={}
-                  width={}
-                  height={}
-              /> */}
-            </WrapperMenuDeroulant>
-
-            <WrapperAjout>
-              <Image src={Plus} alt={"PortraiScopie"} quality={100} />
-              <TextAjout>Ajouter</TextAjout>
-            </WrapperAjout>
-            <WrapperButton>
-              <ButtonLinkPrec>
-                <Link href="/OffreurDeCompetence/Capacites">
-                  <a>
-                    <Text>Précédent</Text>
-                  </a>
-                </Link>
-              </ButtonLinkPrec>
-              <ButtonLink>
-                <Link href="/OffreurDeCompetence/Valeurs">
-                  <a>
-                    <Text>Suivant</Text>
-                  </a>
-                </Link>
-              </ButtonLink>
-            </WrapperButton>
-          </WrapperContent>
-        </WrapperAll>
->>>>>>> 133c992facee42a270397fe2a60ff2fa97a1a8fa
       </Wrapper>
     </>
   );

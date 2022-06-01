@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState,useEffect} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../Header/Header2";
@@ -44,25 +44,23 @@ import Plus from "../../public/image/plus.png";
 
 const Valeurs = () => {
 
-  const [valeurs, setValeurs] = useState("");
+   const [valeurs, setValeurs] = useState("");
 
-  const handleSubmit = async (e) =>  {
-    console.log("Le click fonctionne");
-    try {
-    const response = await axios.post(config.api_url+"/api/portraiscopie/", 
-      JSON.stringify({ valeurs }),
-      {
-        headers : { 'Content-Type' : 'application/json' },
-        withCredentials: true,
+  useEffect(() => {
+  localStorage.setItem("valeurss", JSON.stringify(valeurs));
+}, [valeurs]);
+
+  const handleSubmit = async (e) => {
+      try {
+        const response = await axios.post("https://portraiscopie-dev.herokuapp.com/api/portraiscopies/",
+          {
+            "valeurs" : valeurs,
+          });  
+          console.log(response);
+        } catch(err) {
+          console.log('il y a une erreur');
       }
-    );
-    console.log(JSON.stringify(response?.data));
-  } catch(err) {
-    if (!err?.response) {
-      console.log("Il y a une erreur");
     }
-  }
-}
 
   return (
     <>
@@ -158,7 +156,7 @@ const Valeurs = () => {
               placeholder="Donnez ici une valeur relative à cette compétence"
               value={valeurs}
               onChange={(e) => setValeurs(e.target.value)}
-               />
+            />
           </WrapperMenuDeroulant>
 
             <WrapperAjout>
@@ -173,7 +171,7 @@ const Valeurs = () => {
                   </a>
                 </Link>
               </ButtonLinkPrec>
-              <ButtonLink>
+              <ButtonLink onClick={() => {handleSubmit()}}>
                 <Link href="/OffreurDeCompetence/Talents">
                   <a>
                     <Text>Suivant</Text>

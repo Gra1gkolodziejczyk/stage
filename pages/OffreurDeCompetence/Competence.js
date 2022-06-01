@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Header2 from "../Header/Header2";
@@ -27,11 +27,15 @@ const Competence = () => {
   
   const [competence, setCompetence] = useState("");
 
+  useEffect(() => {
+  localStorage.setItem("compétences", JSON.stringify(competence));
+}, [competence]);
+
   const handleSubmit = async (e) => {
     try {
       const response = await axios.post("https://portraiscopie-dev.herokuapp.com/api/portraiscopies/",
         {
-          "skills" : competence,
+          "compétences" : competence,
         });
         console.log(response);
       } catch(err) {

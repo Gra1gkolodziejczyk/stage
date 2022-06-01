@@ -1,5 +1,4 @@
-import React from "react";
-import Image from "next/image";
+import React, {useState, useEffect} from "react";
 import Link from "next/link";
 import Header from "../Header/Header2";
 
@@ -9,27 +8,7 @@ import WrapperTitle, {
   Wrapper,
 } from "./Diplomes.style";
 
-const Diplomes = () => {
-
-  const [compte, setCompte] = useState("");
-  
-  const handleSubmit = async (e) =>  {
-    console.log("Le click fonctionne");
-    try {
-    const response = await axios.post(config.api_url+"/api/portraiscopie/", 
-      JSON.stringify({ compte, items }),
-      {
-        headers : { 'Content-Type' : 'application/json' },
-        withCredentials: true,
-      }
-    );
-    console.log(JSON.stringify(response?.data));
-  } catch(err) {
-    if (!err?.response) {
-      console.log("Il y à une erreur...");
-    }
-  }
-}
+const Compte = () => {
 
   return (
     <>
@@ -45,11 +24,6 @@ const Diplomes = () => {
         <Title>Boujour {/*Pseudo*/}, prêt à rentrer de nouvelles compétences ?</Title>
         <WrapperCompetence>
           <Title>Compétence</Title>
-          <input 
-            placeholder="mettre compétences" 
-            value={compte}
-            onChange={(e) => setCompte(e.target.value)}
-          />
           <Divide>{/*Barre de finition*/}</Divide>
           <WrapperModifier></WrapperModifier>
           <WrapperSupprimer></WrapperSupprimer>
@@ -66,4 +40,4 @@ const Diplomes = () => {
   );
 };
 
-export default Diplomes;
+export default Compte;

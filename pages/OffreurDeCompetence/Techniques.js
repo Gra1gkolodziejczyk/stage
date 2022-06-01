@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState,useEffect} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../Header/Header2";
@@ -37,25 +37,24 @@ import WrapperTitle, {
 import Idea from "../../public/image/idea.png";
 
 const Techniques = () => {
+
   const [techniques, setTechniques] = useState("");
 
-  const handleSubmit = async (e) =>  {
-    console.log("Le click fonctionne");
-    try {
-    const response = await axios.post(config.api_url+"/api/portraiscopie/", 
-      JSON.stringify({ techniques }),
-      {
-        headers : { 'Content-Type' : 'application/json' },
-        withCredentials: true,
+  useEffect(() => {
+  localStorage.setItem("Techniquess", JSON.stringify(techniques));
+}, [techniques]);
+
+  const handleSubmit = async (e) => {
+      try {
+        const response = await axios.post("https://portraiscopie-dev.herokuapp.com/api/portraiscopies/",
+          {
+            "Techniquess" : techniques,
+          });  
+          console.log(response);
+        } catch(err) {
+          console.log('il y a une erreur');
       }
-    );
-    console.log(JSON.stringify(response?.data));
-  } catch(err) {
-    if (!err?.response) {
-      console.log("Il y a une erreur");
     }
-  }
-}
 
   return (
     <>

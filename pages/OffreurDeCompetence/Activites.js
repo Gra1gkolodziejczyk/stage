@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../Header/Header2";
@@ -43,6 +43,26 @@ import Idea from "../../public/image/idea.png";
 import Plus from "../../public/image/plus.png";
 
 const Activites = () => {
+
+  const [activite, setActivite] = useState("");
+
+  useEffect(() => {
+    localStorage.setItem("activités", JSON.stringify(activite)
+    );}, [activite]);
+
+  const handleSubmit = async (e) =>  {
+    try {
+    const response = await axios.post("https://portraiscopie-dev.herokuapp.com/api/portraiscopies/", 
+      {
+        "activités" : activite,
+      }
+    );
+    console.log(response);
+  } catch(err) {
+      console.log("Il y a une erreur");
+  }
+}
+
   return (
     <>
       <Header />
@@ -132,14 +152,11 @@ const Activites = () => {
           <WrapperContent>
             <Title>Activités pour cette compétence</Title>
             <WrapperMenuDeroulant>
-              <input placeholder="Citez 1 à 5 activité.s réalisée(s) pour cette compétence" />
-
-              {/* Image 
-                    src={}
-                    alt={}
-                    width={}
-                    height={}
-                /> */}
+              <input 
+                placeholder="Citez 1 à 5 activité.s réalisée(s) pour cette compétence" 
+                value={activite}
+                onChange={(e) => setActivite(e.target.value)}
+              />
             </WrapperMenuDeroulant>
 
             <WrapperAjout>
@@ -154,7 +171,7 @@ const Activites = () => {
                   </a>
                 </Link>
               </ButtonLinkPrec>
-              <ButtonLink>
+              <ButtonLink onClick={() => {handleSubmit()}}>
                 <Link href="/OffreurDeCompetence/Taches">
                   <a>
                     <Text>Suivant</Text>
