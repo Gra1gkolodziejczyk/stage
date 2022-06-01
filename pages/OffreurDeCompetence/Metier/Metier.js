@@ -171,7 +171,7 @@ const Metier = () => {
             <Wrapper11>
               <DividerTop11></DividerTop11>
               <TextTop11>11</TextTop11>
-              <TextBottom>Centre d'intérêt</TextBottom>
+              <TextBottom>{"Centre d'intérêt"}</TextBottom>
             </Wrapper11>
           </WrapperProgression>
 
@@ -235,7 +235,7 @@ const Metier = () => {
             </WrapperDate>
             <WrapperDuCoche>
               <WrapperCoche></WrapperCoche>
-              <Text>J'occupe actuellement ce poste</Text>
+              <Text>{"J'occupe actuellement ce poste"}</Text>
             </WrapperDuCoche>
             <WrapperAjout>
               <Image src={Plus} alt={"PortraiScopie"} quality={100} />

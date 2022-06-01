@@ -25,8 +25,9 @@ const Raison = () => {
         <WrapperTitle>
           <Title>Pour quoi souhaitez-vous faire votre PortraiScopie ?</Title>
           <Text>
-            Ces information sont anonymes et n'apparaîtront pas dans votre
-            PortraiScopie. Vous pouvez enregistrer plusieurs réponses
+            {
+              "Ces information sont anonymes et n'apparaîtront pas dans votre PortraiScopie. Vous pouvez enregistrer plusieurs réponses"
+            }
           </Text>
         </WrapperTitle>
         <WrapperCocheAll>
@@ -37,7 +38,7 @@ const Raison = () => {
             </WrapperCoche>
             <WrapperCoche>
               <Coche></Coche>
-              <Text>Préparer mon entretien d'embauche</Text>
+              <Text>{"Préparer mon entretien d'embauche"}</Text>
             </WrapperCoche>
             <WrapperCoche>
               <Coche></Coche>
@@ -52,11 +53,13 @@ const Raison = () => {
             </WrapperCoche>
             <WrapperCoche>
               <Coche></Coche>
-              <Text>Rechercher d'autres pistes de métiers</Text>
+              <Text>{"Rechercher d'autres pistes de métiers"}</Text>
             </WrapperCoche>
             <WrapperCoche>
               <Coche></Coche>
-              <Text>Changer de métiers, de secteur, de domaine d'activité</Text>
+              <Text>
+                {"Changer de métiers, de secteur, de domaine d'activité"}
+              </Text>
             </WrapperCoche>
             <WrapperCoche>
               <Coche></Coche>

@@ -47,8 +47,9 @@ const Competence = () => {
         <WrapperTitle>
           <Title>Mon PortraiScopie Mes Compétences mises en Avant !</Title>
           <TextTitle>
-            PortraiScopie ouvre la voie à l'expression de la compétence et aux
-            savoirs comportementaux rattachés
+            {
+              "PortraiScopie ouvre la voie à l'expression de la compétence et aux savoirs comportementaux rattachés"
+            }
           </TextTitle>
         </WrapperTitle>
         <WrapperCompetence>

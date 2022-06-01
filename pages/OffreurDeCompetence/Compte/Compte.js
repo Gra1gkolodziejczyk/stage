@@ -3,7 +3,18 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "../../Header/Header2";
 
-import WrapperTitle, { Title, Text, Wrapper } from "../Diplomes/Diplomes.style";
+import WrapperTitle, {
+  Title,
+  Text,
+  Wrapper,
+  WrapperTitleMiddle,
+  WrapperTitleRight,
+  WrapperCompetence,
+  Divide,
+  WrapperModifier,
+  WrapperSupprimer,
+  WrapperAdd,
+} from "../Diplomes/Diplomes.style";
 
 const Diplomes = () => {
   const [compte, setCompte] = useState("");

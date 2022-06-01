@@ -43,7 +43,7 @@ const Modif = () => {
           <WrapperContent>
             <WrapperBoxAll>
               <WrapperBox>
-                <Title>Compétence entrer par l'utilisateur</Title>
+                <Title>{"Compétence entrer par l'utilisateur"}</Title>
                 <WrapperProgression>
                   <TextBox>100%</TextBox>
                   <Progression></Progression>

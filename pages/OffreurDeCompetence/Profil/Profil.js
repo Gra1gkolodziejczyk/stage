@@ -39,7 +39,7 @@ const Profil = () => {
             </a>
           </Link>
           <ButtonLink>
-            <Link href="/OffreurDeCompetence/Resumes/Resumes">
+            <Link href="/OffreurDeCompetence/Resume/Resume">
               <a>
                 <TextTopButton>Visualiser mon PortaiScopie</TextTopButton>
               </a>
@@ -56,7 +56,7 @@ const Profil = () => {
             <WrapperBox></WrapperBox>
           </WrapperCard>
           <WrapperCard>
-            <TitleCard>Changer d'adresse mail</TitleCard>
+            <TitleCard>{"Changer d'adresse mail"}</TitleCard>
             <WrapperBox></WrapperBox>
           </WrapperCard>
         </WrapperMiddle>

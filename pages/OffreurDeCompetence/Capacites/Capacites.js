@@ -118,7 +118,7 @@ const Capacites = () => {
             <Wrapper11>
               <DividerTop></DividerTop>
               <TextTop>11</TextTop>
-              <TextBottom>Centre d'intérêt</TextBottom>
+              <TextBottom>{"Centre d'intérêt"}</TextBottom>
             </Wrapper11>
           </WrapperProgression>
 
