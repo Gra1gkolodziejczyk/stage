@@ -21,7 +21,7 @@ import WrapperContent, {
   Footer1,
 } from "./Competence.style";
 
-import Idea from "../../../public/image/Idea.png";
+import Idea from "../../../public/image/idea.png";
 
 const Competence = () => {
   const [competence, setCompetence] = useState("");

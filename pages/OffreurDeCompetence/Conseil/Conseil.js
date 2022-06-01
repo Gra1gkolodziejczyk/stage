@@ -15,7 +15,7 @@ import Container, {
   Footer1,
 } from "./Conseil.style";
 
-import Flêche from "../../../public/image/Fleche-droite.png";
+import Flêche from "../../../public/image/fleche-droite.png";
 
 const Conseil = () => {
   return (
